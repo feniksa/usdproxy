@@ -11,6 +11,14 @@
 
 PXR_NAMESPACE_USING_DIRECTIVE
 
+namespace usdproxy
+{
+    void Test2::DoSomething()
+    {
+
+    }
+}
+
 extern "C"
 {
     int dostage()

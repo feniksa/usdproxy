@@ -14,6 +14,9 @@ include("${CMAKE_SOURCE_DIR}/cmake/CompileOptions.cmake")
 find_package(Boost REQUIRED COMPONENTS filesystem)
 find_package(pxr REQUIRED)
 
+set(USD_DEPS "c:/libs/usdbuild")
+set(USD_ROOT "c:/libs/usd")
+
 add_subdirectory(src)
 if(ENABLE_TESTING)
 	enable_testing()

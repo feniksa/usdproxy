@@ -44,8 +44,12 @@ target_include_directories(tests_main
 )
 configure_file(Environment.h.in ${CMAKE_CURRENT_BINARY_DIR}/Environment.h @ONLY)
 
+
+function(copy_usd_bins)
+	message(STATUS "TEST")
+endfunction()
+
 message(STATUS "Copy USD main libraries")
-set(USD_ROOT "c:/libs/usd")
 file(GLOB DLLS "${USD_ROOT}/bin/*.dll")
 foreach (dll ${DLLS})
 	get_filename_component(dll_name "${dll}" NAME)
@@ -58,7 +62,6 @@ foreach (dll ${DLLS})
 endforeach ()
 
 message(STATUS "Copy USD library runtime deps")
-set(USD_DEPS "c:/libs/usdbuild")
 file(GLOB DLLS "${USD_DEPS}/libs/bin/*.dll")
 foreach (dll ${DLLS})
 	get_filename_component(dll_name "${dll}" NAME)

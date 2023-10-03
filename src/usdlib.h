@@ -6,14 +6,18 @@
     #define LIBUSDPROXY_API __declspec(dllimport)
 #endif
 
-class Test
+namespace usdproxy
 {
-    void test() {}
+
+class Test2
+{
+public:
+    LIBUSDPROXY_API void DoSomething();
 };
+
+}
 
 extern "C"
 {
-
-
     LIBUSDPROXY_API int dostage();
 }

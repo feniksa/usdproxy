@@ -31,7 +31,7 @@ foreach(test ${TESTS})
 endforeach()
 
 add_executable(tests_main ${TEST_SOURCES} ${TEST_HEADERS})
-target_link_libraries(tests_main
+target_link_libraries(tests_main PRIVATE
 	GTest::gtest
 	GTest::gtest_main
 	usdproxy

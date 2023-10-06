@@ -13,18 +13,19 @@ PXR_NAMESPACE_USING_DIRECTIVE
 
 namespace usdproxy
 {
-    void Test2::DoSomething()
-    {
-
-    }
 }
 
 extern "C"
 {
+    void deleteUsdStageRefPtr(pxr::UsdStageRefPtr ptr)
+    {
+        ptr.Reset();
+    }
+
     int dostage()
     {
            // Path to the USD file
-            const std::string filePath = "d:\\temp\\simple.usda";
+            const std::string filePath = "c:\\temp\\simple.usda";
 
             // Create a USD stage
             pxr::UsdStageRefPtr stage = pxr::UsdStage::Open(filePath);

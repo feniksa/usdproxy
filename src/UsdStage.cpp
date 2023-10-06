@@ -4,10 +4,10 @@
 
 PXR_NAMESPACE_USING_DIRECTIVE
 
-namespace usdproxy
+namespace
 {
 
-inline pxr::UsdStage::InitialLoadSet convert(UsdStage::InitialLoadSet load)
+pxr::UsdStage::InitialLoadSet convert(usdproxy::UsdStage::InitialLoadSet load)
 {
     switch(load){
         case usdproxy::UsdStage::LoadAll:
@@ -19,6 +19,15 @@ inline pxr::UsdStage::InitialLoadSet convert(UsdStage::InitialLoadSet load)
     }
 }
 
+}
+
+namespace usdproxy
+{
+
+UsdStage::UsdStage(UsdStageRefPtr usdStageRefPtr) : m_usdStageRefPtr(usdStageRefPtr)
+{
+}
+
 UsdStageRefPtr UsdStage::Open(const std::string& filePath, InitialLoadSet load)
 {
     pxr::UsdStageRefPtr stagePtr = pxr::UsdStage::Open(filePath, convert(load));
@@ -28,8 +37,17 @@ UsdStageRefPtr UsdStage::Open(const std::string& filePath, InitialLoadSet load)
 UsdStageRefPtr UsdStage::CreateInMemory()
 {
     pxr::UsdStageRefPtr stagePtr = pxr::UsdStage::CreateInMemory();
-
     return UsdStageRefPtr(stagePtr);
+}
+
+SdfLayerHandle UsdStage::GetRootLayer()
+{
+    return SdfLayerHandle(m_usdStageRefPtr.GetRootLayer());
+}
+
+UsdStageRefPtr& UsdStage::GetPtr()
+{
+    return m_usdStageRefPtr;
 }
 
 }

@@ -1,7 +1,7 @@
-%module UsdStageRefPtr
+%module UsdStageWeakPtr
 
 %{
-#include "UsdStageRefPtr.h"
+#include "UsdStageWeakPtr.h"
 %}
 
-%include "UsdStageRefPtr.h"
+%include "UsdStageWeakPtr.h"

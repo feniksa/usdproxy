@@ -8,4 +8,9 @@ SdfLayerHandle::SdfLayerHandle(pxr::SdfLayerHandle handle)
 {
 }
 
+bool SdfLayerHandle::Export(const std::string &filePath)
+{
+    return m_sdfLayerHandle->Export(filePath);
+}
+
 }

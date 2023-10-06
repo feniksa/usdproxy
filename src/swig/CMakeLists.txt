@@ -39,10 +39,10 @@ add_dependencies(UsdProxyCs SwigFilesFakeDep)
 # Doesn't work with the VC generator ...
 set_target_properties(UsdProxyCs PROPERTIES ADDITIONAL_CLEAN_FILES "${CMAKE_BINARY_DIR}/*.cs;")
 
-file(GLOB CSS CONFIGURE_DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/*.cs")
-foreach (csfile ${CSS})
-    install(FILES "${csfile}" DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
-endforeach ()
+#file(GLOB CSS CONFIGURE_DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/*.cs")
+#foreach (csfile ${CSS})
+#    install(FILES "${csfile}" DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+#endforeach ()
 
 #set_target_properties(usdproxy PROPERTIES PUBLIC_HEADERS "usdlib.h")
 install(TARGETS UsdProxyCs DESTINATION ${CMAKE_INSTALL_LIBDIR})

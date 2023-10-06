@@ -6,7 +6,6 @@ namespace usdproxy
 UsdStageRefPtr::UsdStageRefPtr(pxr::UsdStageRefPtr ptr)
         : m_ptr(ptr)
 {
-
 }
 
 SdfLayerHandle UsdStageRefPtr::GetRootLayer() const
@@ -20,6 +19,12 @@ void UsdStageRefPtr::Traverse() const
 }
 
 bool UsdStageRefPtr::IsOpened() const
+{
+    return m_ptr != nullptr;
+}
+
+
+pxr::UsdStageRefPtr& UsdStageRefPtr::Get()
 {
     return m_ptr;
 }

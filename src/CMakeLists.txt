@@ -1,14 +1,18 @@
 set(HEADERS
 	UsdStage.h
 	UsdStageRefPtr.h
+	UsdStageWeakPtr.h
 	SdfLayerHandle.h
+	SdfPath.h
 	usdlib.h
 )
 
 set(SOURCES
 	UsdStage.cpp
 	UsdStageRefPtr.cpp
+	UsdStageWeakPtr.cpp
 	SdfLayerHandle.cpp
+	SdfPath.cpp
 	usdlib.cpp
 )
 

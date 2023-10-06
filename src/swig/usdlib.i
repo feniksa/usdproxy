@@ -11,5 +11,7 @@
 %include "usdlib.h"
 
 %include "UsdStageRefPtr.i"
-%include "UsdStage.i"
+%include "UsdStageWeakPtr.i"
 %include "SdfLayerHandle.i"
+%include "UsdStage.i"
+%include "SdfPath.i"

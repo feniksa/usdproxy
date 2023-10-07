@@ -9,6 +9,8 @@
 namespace usdproxy
 {
 
+class UsdPrim;
+
 class UsdStage
 {
 public:
@@ -37,6 +39,9 @@ public:
 
     LIBUSDPROXY_API
     SdfLayerHandle GetRootLayer();
+
+	LIBUSDPROXY_API
+	void SetDefaultPrim(const UsdPrim& prim);
 
     LIBUSDPROXY_API
     UsdStageRefPtr& GetPtr();

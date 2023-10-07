@@ -7,6 +7,8 @@
 namespace usdproxy
 {
 
+class UsdPrim;
+
 class UsdStageRefPtr {
 public:
     LIBUSDPROXY_API
@@ -24,6 +26,8 @@ public:
     LIBUSDPROXY_API
     pxr::UsdStageRefPtr& Get();
 
+	LIBUSDPROXY_API
+	void SetDefaultPrim(const UsdPrim& prim);
 private:
     pxr::UsdStageRefPtr m_ptr;
 };

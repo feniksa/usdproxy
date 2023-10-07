@@ -1,4 +1,5 @@
 #include "UsdStageRefPtr.h"
+#include "UsdPrim.h"
 
 namespace usdproxy
 {
@@ -27,6 +28,11 @@ bool UsdStageRefPtr::IsOpened() const
 pxr::UsdStageRefPtr& UsdStageRefPtr::Get()
 {
     return m_ptr;
+}
+
+void UsdStageRefPtr::SetDefaultPrim(const UsdPrim& prim)
+{
+	m_ptr->SetDefaultPrim(prim.Get());
 }
 
 }

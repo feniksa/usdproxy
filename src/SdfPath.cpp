@@ -12,6 +12,11 @@ SdfPath::SdfPath(const std::string& path) : m_sdfPath(path)
 {
 }
 
+const pxr::SdfPath& SdfPath::Get() const
+{
+	return m_sdfPath;
+}
+
 }
 
 

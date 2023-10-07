@@ -50,4 +50,9 @@ UsdStageRefPtr& UsdStage::GetPtr()
     return m_usdStageRefPtr;
 }
 
+void UsdStage::SetDefaultPrim(const UsdPrim& prim)
+{
+	m_usdStageRefPtr.SetDefaultPrim(prim);
+}
+
 }

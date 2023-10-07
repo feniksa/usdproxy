@@ -11,6 +11,7 @@ using namespace usdproxy;
 %include "usdlib.h"
 
 %include "UsdPrim.i"
+%include "TfToken.i"
 
 %include "UsdStageRefPtr.i"
 %include "UsdStageWeakPtr.i"
@@ -19,7 +20,9 @@ using namespace usdproxy;
 %include "SdfLayerHandle.i"
 %include "UsdStage.i"
 %include "SdfPath.i"
+%include "UsdGeomTokens.i"
 %include "UsdGeomScope.i"
+%include "UsdGeomXform.i"
 %include "UsdGeomMesh.i"
 %include "VtIntArray.i"
 %include "GfVec3f.i"

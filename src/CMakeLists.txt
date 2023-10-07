@@ -4,13 +4,17 @@ set(HEADERS
 	UsdStageWeakPtr.h
 	UsdStagePtr.h
 	UsdGeomScope.h
+	UsdGeomXform.h
 	UsdGeomMesh.h
 	SdfLayerHandle.h
 	SdfPath.h
 	VtIntArray.h
 	GfVec3f.h
 	VtVec3fArray.h
+	TfToken.h
 	UsdPrim.h
+	UsdGeomTokens.h
+	UsdGeomPrimvar.h
 	usdlib.h
 )
 
@@ -19,13 +23,17 @@ set(SOURCES
 	UsdStageRefPtr.cpp
 	UsdStageWeakPtr.cpp
 	UsdGeomScope.cpp
+	UsdGeomXform.cpp
 	UsdGeomMesh.cpp
 	SdfLayerHandle.cpp
 	SdfPath.cpp
 	VtIntArray.cpp
 	GfVec3f.cpp
 	VtVec3fArray.cpp
+	TfToken.cpp
 	UsdPrim.cpp
+	UsdGeomTokens.cpp
+	UsdGeomPrimvar.cpp
 	usdlib.cpp
 )
 

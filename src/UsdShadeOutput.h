@@ -17,6 +17,10 @@ public:
 
 	LIBUSDPROXY_API
 	bool ConnectToSource(const UsdShadeConnectableAPI& api, const TfToken& path);
+
+	LIBUSDPROXY_API
+	const pxr::UsdShadeOutput& Get() const;
+
 private:
 	pxr::UsdShadeOutput m_usdShadeOutput;
 };

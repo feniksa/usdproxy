@@ -1,7 +1,43 @@
 #include "SdfValueTypeName.h"
 
+
 namespace usdproxy
 {
+
+pxr::SdfValueTypeName convert(SdfValueTypeName::SdfValueTypeNames typeName)
+{
+	switch (typeName) {
+	case SdfValueTypeName::Asset:
+		return pxr::SdfValueTypeNames->Asset;
+	case SdfValueTypeName::Float:
+		return pxr::SdfValueTypeNames->Float;
+	case SdfValueTypeName::Int:
+		return pxr::SdfValueTypeNames->Int;
+	case SdfValueTypeName::Color3f:
+		return pxr::SdfValueTypeNames->Color3f;
+	case SdfValueTypeName::String:
+		return pxr::SdfValueTypeNames->String;
+	case SdfValueTypeName::Token:
+		return pxr::SdfValueTypeNames->Token;
+	case SdfValueTypeName::Float2:
+		return pxr::SdfValueTypeNames->Float2;
+	case SdfValueTypeName::Vector3f:
+		return pxr::SdfValueTypeNames->Vector3f;
+	default:
+		return pxr::SdfValueTypeNames->String;
+	}
+}
+
+SdfValueTypeName::SdfValueTypeName(pxr::SdfValueTypeName&& typeName)
+: m_sdfValueTypeName(std::move(typeName))
+{
+
+}
+
+SdfValueTypeName::SdfValueTypeName(SdfValueTypeNames typeName)
+: m_sdfValueTypeName(convert(typeName))
+{
+}
 
 const pxr::SdfValueTypeName& SdfValueTypeName::Get() const
 {

@@ -20,6 +20,7 @@ using namespace usdproxy;
 %include "SdfLayerHandle.i"
 %include "UsdStage.i"
 %include "SdfPath.i"
+%include "SdfAssetPath.i"
 %include "UsdGeomTokens.i"
 %include "UsdGeomScope.i"
 %include "UsdGeomXform.i"
@@ -32,4 +33,5 @@ using namespace usdproxy;
 %include "UsdShadeConnectableAPI.i"
 %include "UsdShadeOutput.i"
 %include "UsdShadeMaterial.i"
+%include "SdfValueTypeName.i"
 

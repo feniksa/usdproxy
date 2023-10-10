@@ -8,6 +8,7 @@ set(HEADERS
 	UsdGeomMesh.h
 	SdfLayerHandle.h
 	SdfPath.h
+	SdfAssetPath.h
 	VtIntArray.h
 	GfVec3f.h
 	VtVec3fArray.h
@@ -34,6 +35,7 @@ set(SOURCES
 	UsdGeomMesh.cpp
 	SdfLayerHandle.cpp
 	SdfPath.cpp
+	SdfAssetPath.cpp
 	VtIntArray.cpp
 	GfVec3f.cpp
 	VtVec3fArray.cpp

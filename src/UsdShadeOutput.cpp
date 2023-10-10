@@ -15,6 +15,10 @@ bool UsdShadeOutput::ConnectToSource(const UsdShadeConnectableAPI& api, const Tf
 	return m_usdShadeOutput.ConnectToSource(api.Get(), token.Get());
 }
 
+const pxr::UsdShadeOutput& UsdShadeOutput::Get() const
+{
+	return m_usdShadeOutput;
+}
 
 }
 

@@ -4,6 +4,7 @@
 #include "UsdShadeConnectableAPI.h"
 #include "TfToken.h"
 #include "SdfValueTypeName.h"
+#include "UsdShadeOutput.h"
 
 namespace usdproxy
 {
@@ -43,6 +44,21 @@ UsdAttribute UsdShadeShader::CreateImplementationSourceAttr(const TfToken& token
 UsdShadeInput UsdShadeShader::CreateInput(const TfToken& token, const SdfValueTypeName& sdfValueTypeName)
 {
 	return { m_usdShadeShader.CreateInput(token.Get(), sdfValueTypeName.Get()) };
+}
+
+UsdShadeInput UsdShadeShader::CreateInput(const TfToken& token, const SdfValueTypeName::SdfValueTypeNames& sdfValue)
+{
+	return CreateInput(token, SdfValueTypeName(sdfValue));
+}
+
+UsdShadeOutput UsdShadeShader::CreateOutput(const TfToken& token, const SdfValueTypeName& typeName)
+{
+	return { m_usdShadeShader.CreateOutput(token.Get(), typeName.Get()) };
+}
+
+UsdShadeOutput UsdShadeShader::CreateOutput(const TfToken& token, const SdfValueTypeName::SdfValueTypeNames& typeName)
+{
+	return CreateOutput(token, SdfValueTypeName(typeName));
 }
 
 }

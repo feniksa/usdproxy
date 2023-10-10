@@ -2,6 +2,7 @@
 #include "UsdStage.h"
 #include "UsdStageRefPtr.h"
 #include "SdfPath.h"
+#include "UsdPrim.h"
 
 namespace usdproxy
 {
@@ -14,6 +15,28 @@ UsdStageWeakPtr::UsdStageWeakPtr(UsdStageRefPtr &usdStageRefPtr)
 UsdStageWeakPtr::UsdStageWeakPtr(UsdStage &usdStage)
 	: m_usdStageWeakPtr(usdStage.GetPtr().Get())
 {
+}
+
+UsdStageWeakPtr::UsdStageWeakPtr(pxr::UsdStageWeakPtr&& usdStageWeakPtr)
+: m_usdStageWeakPtr(std::move(usdStageWeakPtr))
+{
+}
+
+
+UsdStageWeakPtr::UsdStageWeakPtr(UsdStageWeakPtr&& other) noexcept
+: m_usdStageWeakPtr(std::move(other.m_usdStageWeakPtr))
+{
+}
+
+UsdStageWeakPtr& UsdStageWeakPtr::operator=(UsdStageWeakPtr&& other) noexcept
+{
+	if (this == &other)
+		return *this;
+
+	std::swap(m_usdStageWeakPtr, other.m_usdStageWeakPtr);
+	other.m_usdStageWeakPtr.Reset();
+
+	return *this;
 }
 
 bool UsdStageWeakPtr::HasDefaultPrim() const

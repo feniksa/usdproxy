@@ -15,6 +15,7 @@ set(HEADERS
 	UsdPrim.h
 	UsdGeomTokens.h
 	UsdGeomPrimvar.h
+	UsdShadeMaterial.h
 	usdlib.h
 )
 
@@ -34,6 +35,7 @@ set(SOURCES
 	UsdPrim.cpp
 	UsdGeomTokens.cpp
 	UsdGeomPrimvar.cpp
+	UsdShadeMaterial.cpp
 	usdlib.cpp
 )
 

@@ -1,13 +1,13 @@
 #pragma once
 
 #include "usdlib.h"
-//#include "UsdStageWeakPtr.h"
 #include <pxr/usd/usd/prim.h>
 
 namespace usdproxy
 {
 
 class UsdStageWeakPtr;
+class SdfPath;
 
 class UsdPrim
 {
@@ -29,6 +29,10 @@ public:
 
 	LIBUSDPROXY_API
 	UsdStageWeakPtr GetStage() const;
+
+	LIBUSDPROXY_API
+	SdfPath GetPath() const;
+
 private:
 	pxr::UsdPrim m_usdPrim;
 };

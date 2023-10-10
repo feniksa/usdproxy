@@ -27,5 +27,9 @@ using namespace usdproxy;
 %include "VtIntArray.i"
 %include "GfVec3f.i"
 %include "VtVec3fArray.i"
+%include "UsdAttribute.i"
+%include "UsdShadeShader.i"
+%include "UsdShadeConnectableAPI.i"
+%include "UsdShadeOutput.i"
 %include "UsdShadeMaterial.i"
 

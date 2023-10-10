@@ -1,6 +1,7 @@
 #include "UsdPrim.h"
 
 #include "UsdStageWeakPtr.h"
+#include "SdfPath.h"
 
 namespace usdproxy
 {
@@ -19,6 +20,11 @@ UsdPrim::UsdPrim(pxr::UsdPrim&& usdPrim) noexcept
 UsdStageWeakPtr UsdPrim::GetStage() const
 {
 	return UsdStageWeakPtr(m_usdPrim.GetStage());
+}
+
+SdfPath UsdPrim::GetPath() const
+{
+	return SdfPath(m_usdPrim.GetPath());
 }
 
 }

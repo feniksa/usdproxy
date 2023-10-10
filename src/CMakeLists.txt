@@ -15,7 +15,13 @@ set(HEADERS
 	UsdPrim.h
 	UsdGeomTokens.h
 	UsdGeomPrimvar.h
+	UsdAttribute.h
+	SdfValueTypeName.h
+	UsdShadeInput.h
+	UsdShadeShader.h
 	UsdShadeMaterial.h
+	UsdShadeConnectableAPI.h
+	UsdShadeOutput.h
 	usdlib.h
 )
 
@@ -35,7 +41,13 @@ set(SOURCES
 	UsdPrim.cpp
 	UsdGeomTokens.cpp
 	UsdGeomPrimvar.cpp
+	UsdAttribute.cpp
+	SdfValueTypeName.cpp
+	UsdShadeInput.cpp
+	UsdShadeShader.cpp
 	UsdShadeMaterial.cpp
+	UsdShadeConnectableAPI.cpp
+	UsdShadeOutput.cpp
 	usdlib.cpp
 )
 

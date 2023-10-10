@@ -8,6 +8,7 @@ namespace usdproxy
 
 class UsdStageWeakPtr;
 class SdfPath;
+class UsdShadeOutput;
 
 class UsdShadeMaterial
 {
@@ -21,6 +22,12 @@ public:
 	LIBUSDPROXY_API
 	static
 	UsdShadeMaterial Define(const UsdStageWeakPtr& stage, const SdfPath& path);
+
+	LIBUSDPROXY_API
+	UsdShadeOutput CreateSurfaceOutput();
+
+	LIBUSDPROXY_API
+	SdfPath GetPath() const;
 private:
 	pxr::UsdShadeMaterial m_usdShadeMaterial;
 };

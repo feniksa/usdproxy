@@ -21,6 +21,7 @@ set(HEADERS
 	GfRotation.h
 	GfMatrix4d.h
 	GfQuatd.h
+	GfHalf.h
 	VtVec3fArray.h
 	VtQuathArray.h
 	TfToken.h
@@ -58,6 +59,7 @@ set(SOURCES
 	GfVec2d.cpp
 	GfVec2f.cpp
 	GfQuath.cpp
+	GfHalf.cpp
 	GfRotation.cpp
 	GfMatrix4d.cpp
 	GfQuatd.cpp

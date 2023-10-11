@@ -46,4 +46,5 @@ using namespace usdproxy;
 %include "UsdShadeMaterial.i"
 %include "UsdRelationship.i"
 %include "SdfValueTypeName.i"
+%include "GfHalf.i"
 

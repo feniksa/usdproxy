@@ -5,11 +5,24 @@
 
 namespace usdproxy
 {
+
+class GfHalf;
+
 class GfQuath
 {
 public:
 	LIBUSDPROXY_API
 	GfQuath() = default;
+
+	LIBUSDPROXY_API
+	GfQuath(GfHalf realVal);
+
+	LIBUSDPROXY_API
+	GfQuath(GfHalf real, GfHalf i, GfHalf j, GfHalf k);
+
+	// alias for GfHalf
+	LIBUSDPROXY_API
+	GfQuath(float real, float i, float j, float k);
 
 	LIBUSDPROXY_API
 	GfQuath(pxr::GfQuath&& gfQuath);

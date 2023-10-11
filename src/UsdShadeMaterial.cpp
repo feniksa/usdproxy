@@ -2,6 +2,8 @@
 #include "UsdStageWeakPtr.h"
 #include "SdfPath.h"
 #include "UsdShadeOutput.h"
+#include "UsdPrim.h"
+#include "pxr/usd/usdShade/materialBindingAPI.h"
 
 namespace usdproxy
 {
@@ -28,6 +30,14 @@ UsdShadeOutput UsdShadeMaterial::CreateSurfaceOutput()
 SdfPath UsdShadeMaterial::GetPath() const
 {
 	return SdfPath(m_usdShadeMaterial.GetPath());
+}
+
+
+void UsdShadeMaterial::Bind(const UsdPrim& prim)
+{
+	//m_usdShadeMaterial.
+	pxr::UsdShadeMaterialBindingAPI bindingApi(prim.Get());
+	bindingApi.Bind(m_usdShadeMaterial);
 }
 
 }

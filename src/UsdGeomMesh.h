@@ -43,7 +43,10 @@ public:
 	bool SetNormalsInterpolation(UsdGeomTokens token);
 
 	LIBUSDPROXY_API
-	UsdGeomPrimvar CreatePrimVar();
+	bool SetNormalsInterpolation(const UsdGeomTokens::Token& token);
+
+	//LIBUSDPROXY_API
+	//UsdGeomPrimvar CreatePrimVar();
 
 	LIBUSDPROXY_API
 	UsdPrim GetPrim() const;

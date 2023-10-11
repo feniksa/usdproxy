@@ -4,6 +4,7 @@
 #include "SdfPath.h"
 
 #include <pxr/usd/usdGeom/xform.h>
+#include "UsdGeomXformOp.h"
 
 namespace usdproxy
 {
@@ -18,6 +19,10 @@ public:
 	explicit UsdGeomXform() = default;
 
 	LIBUSDPROXY_API
+	static
+	UsdGeomXform Define(UsdStageWeakPtr& stage, const SdfPath& path);
+
+	LIBUSDPROXY_API
 	explicit UsdGeomXform(pxr::UsdGeomXform&& usdGeomXform);
 
 	LIBUSDPROXY_API
@@ -27,12 +32,10 @@ public:
 	UsdGeomXform& operator=(const UsdGeomXform& other) = default;
 
 	LIBUSDPROXY_API
-	SdfPath GetPath() const;
+	UsdGeomXformOp AddTransformOp() const;
 
 	LIBUSDPROXY_API
-	static
-	UsdGeomXform Define(UsdStageWeakPtr& stage, const SdfPath& path);
-
+	SdfPath GetPath() const;
 private:
 	pxr::UsdGeomXform m_usdGeomXform;
 };

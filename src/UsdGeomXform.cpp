@@ -21,4 +21,9 @@ SdfPath UsdGeomXform::GetPath() const
 	return SdfPath(m_usdGeomXform.GetPath());
 }
 
+UsdGeomXformOp UsdGeomXform::AddTransformOp() const
+{
+	return {m_usdGeomXform.AddTransformOp() };
+}
+
 }

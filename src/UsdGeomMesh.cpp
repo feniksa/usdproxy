@@ -54,11 +54,16 @@ bool UsdGeomMesh::SetNormalsInterpolation(UsdGeomTokens token)
 	return m_usdGeomMesh.SetNormalsInterpolation(token.toPxrToken());
 }
 
-UsdGeomPrimvar UsdGeomMesh::CreatePrimVar()
+bool UsdGeomMesh::SetNormalsInterpolation(const UsdGeomTokens::Token& token)
+{
+	return SetNormalsInterpolation(UsdGeomTokens(token));
+}
+
+/*UsdGeomPrimvar UsdGeomMesh::CreatePrimVar()
 {
 	//TODO: fix this, api change
 	return UsdGeomPrimvar();
-}
+}*/
 
 UsdPrim UsdGeomMesh::GetPrim() const
 {

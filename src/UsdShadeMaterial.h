@@ -9,6 +9,7 @@ namespace usdproxy
 class UsdStageWeakPtr;
 class SdfPath;
 class UsdShadeOutput;
+class UsdPrim;
 
 class UsdShadeMaterial
 {
@@ -28,6 +29,9 @@ public:
 
 	LIBUSDPROXY_API
 	SdfPath GetPath() const;
+
+	LIBUSDPROXY_API
+	void Bind(const UsdPrim&);
 private:
 	pxr::UsdShadeMaterial m_usdShadeMaterial;
 };

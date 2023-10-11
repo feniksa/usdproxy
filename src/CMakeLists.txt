@@ -7,6 +7,7 @@ set(HEADERS
 	UsdGeomScope.h
 	UsdGeomXform.h
 	UsdGeomMesh.h
+	UsdRelationship.h
 	SdfLayerHandle.h
 	SdfPath.h
 	SdfAssetPath.h
@@ -16,12 +17,15 @@ set(HEADERS
 	GfVec3d.h
 	GfVec2d.h
 	GfVec2f.h
+	GfQuath.h
 	GfRotation.h
 	GfMatrix4d.h
 	GfQuatd.h
 	VtVec3fArray.h
+	VtQuathArray.h
 	TfToken.h
 	UsdPrim.h
+	UsdGeomPointInstancer.h
 	UsdGeomTokens.h
 	UsdGeomPrimvar.h
 	UsdAttribute.h
@@ -42,21 +46,25 @@ set(SOURCES
 	UsdGeomScope.cpp
 	UsdGeomXform.cpp
 	UsdGeomMesh.cpp
+	UsdRelationship.cpp
 	SdfLayerHandle.cpp
 	SdfPath.cpp
 	SdfAssetPath.cpp
 	VtIntArray.cpp
 	VtVec2fArray.cpp
+	VtQuathArray.cpp
 	GfVec3f.cpp
 	GfVec3d.cpp
 	GfVec2d.cpp
 	GfVec2f.cpp
+	GfQuath.cpp
 	GfRotation.cpp
 	GfMatrix4d.cpp
 	GfQuatd.cpp
 	VtVec3fArray.cpp
 	TfToken.cpp
 	UsdPrim.cpp
+	UsdGeomPointInstancer.cpp
 	UsdGeomTokens.cpp
 	UsdGeomPrimvar.cpp
 	UsdAttribute.cpp

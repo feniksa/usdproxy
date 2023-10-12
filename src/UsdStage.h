@@ -54,6 +54,9 @@ public:
 	UsdPrim OverridePrim(const SdfPath& path);
 
 	LIBUSDPROXY_API
+	bool RemovePrim(const SdfPath& path);
+
+	LIBUSDPROXY_API
 	const pxr::UsdStageRefPtr& Get() const;
 private:
     pxr::UsdStageRefPtr m_usdStageRefPtr;

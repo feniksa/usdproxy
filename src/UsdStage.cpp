@@ -73,4 +73,8 @@ UsdPrim UsdStage::GetDefaultPrim() const
 	return { m_usdStageRefPtr->GetDefaultPrim() };
 }
 
+bool UsdStage::RemovePrim(const SdfPath& path)
+{
+	return m_usdStageRefPtr->RemovePrim(path.Get());
+}
 }

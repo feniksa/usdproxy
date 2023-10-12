@@ -2,6 +2,7 @@
 
 #include "usdlib.h"
 #include <pxr/usd/usd/prim.h>
+#include <string>
 
 namespace usdproxy
 {
@@ -34,7 +35,7 @@ public:
 	SdfPath GetPath() const;
 
 	LIBUSDPROXY_API
-	bool References_AddReference(std::string& identifier, const SdfPath& primPath);
+	bool GetReferences_AddReference(const std::string& identifier, const SdfPath& primPath);
 
 private:
 	pxr::UsdPrim m_usdPrim;

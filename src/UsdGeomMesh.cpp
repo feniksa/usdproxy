@@ -1,10 +1,16 @@
 #include "UsdGeomMesh.h"
+#include "UsdGeomPrimvar.h"
+#include "UsdPrim.h"
 #include "VtIntArray.h"
 #include "VtVec3fArray.h"
 #include "UsdStageWeakPtr.h"
 #include "SdfPath.h"
+#include "TfToken.h"
+#include "SdfValueTypeName.h"
+#include "UsdAttribute.h"
+
 #include <pxr/base/vt/value.h>
-#include <pxr/base/vt/types.h>
+#include <pxr/usd/usdGeom/primvarsAPI.h>
 
 namespace usdproxy
 {
@@ -59,11 +65,21 @@ bool UsdGeomMesh::SetNormalsInterpolation(const UsdGeomTokens::Token& token)
 	return SetNormalsInterpolation(UsdGeomTokens(token));
 }
 
-/*UsdGeomPrimvar UsdGeomMesh::CreatePrimVar()
+UsdGeomPrimvar UsdGeomMesh::CreatePrimvar(const TfToken& token, const SdfValueTypeName& valueType) const
 {
-	//TODO: fix this, api change
-	return UsdGeomPrimvar();
-}*/
+	pxr::UsdGeomPrimvarsAPI api(m_usdGeomMesh.GetPrim());
+	return { api.CreatePrimvar(token.Get(), valueType.Get()) };
+}
+
+UsdGeomPrimvar UsdGeomMesh::CreatePrimvar(const TfToken& token, const SdfValueTypeName::SdfValueTypeNames & valueType) const
+{
+	return CreatePrimvar(token, SdfValueTypeName(valueType));
+}
+
+UsdAttribute UsdGeomMesh::CreateAttribute(const TfToken& token, const SdfValueTypeName& valueType) const
+{
+	return { m_usdGeomMesh.GetPrim().CreateAttribute(token.Get(), valueType.Get()) };
+}
 
 UsdPrim UsdGeomMesh::GetPrim() const
 {

@@ -2,8 +2,7 @@
 
 #include "usdlib.h"
 #include "UsdGeomTokens.h"
-#include "UsdGeomPrimvar.h"
-#include "UsdPrim.h"
+#include "SdfValueTypeName.h"
 #include <pxr/usd/usdGeom/mesh.h>
 
 namespace usdproxy
@@ -13,6 +12,11 @@ class VtIntArray;
 class VtVec3fArray;
 class UsdStageWeakPtr;
 class SdfPath;
+class UsdPrim;
+class UsdAttribute;
+class UsdPrim;
+class TfToken;
+class UsdGeomPrimvar;
 
 class UsdGeomMesh
 {
@@ -45,8 +49,14 @@ public:
 	LIBUSDPROXY_API
 	bool SetNormalsInterpolation(const UsdGeomTokens::Token& token);
 
-	//LIBUSDPROXY_API
-	//UsdGeomPrimvar CreatePrimVar();
+	LIBUSDPROXY_API
+	UsdAttribute CreateAttribute(const TfToken& token, const SdfValueTypeName& valueType) const;
+
+	LIBUSDPROXY_API
+	UsdGeomPrimvar CreatePrimvar(const TfToken& token, const SdfValueTypeName& valueType) const;
+
+	LIBUSDPROXY_API
+	UsdGeomPrimvar CreatePrimvar(const TfToken& token, const SdfValueTypeName::SdfValueTypeNames & valueType) const; // alias
 
 	LIBUSDPROXY_API
 	UsdPrim GetPrim() const;

@@ -12,6 +12,8 @@ public:
 	LIBUSDPROXY_API
 	UsdGeomPrimvar() = default;
 
+	LIBUSDPROXY_API
+	UsdGeomPrimvar(pxr::UsdGeomPrimvar&& usdGeomPrimvar);
 private:
 	pxr::UsdGeomPrimvar m_usdGeomPrimvar;
 };

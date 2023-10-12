@@ -1,15 +1,16 @@
 #pragma once
 
 #include "usdlib.h"
-#include "UsdStageRefPtr.h"
-#include "SdfLayerHandle.h"
 #include <pxr/usd/usd/stage.h>
 #include <string>
 
 namespace usdproxy
 {
 
+class UsdStageRefPtr;
 class UsdPrim;
+class SdfPath;
+class SdfLayerHandle;
 
 class UsdStage
 {
@@ -21,7 +22,10 @@ public:
     };
 
     LIBUSDPROXY_API
-    UsdStage(UsdStageRefPtr usdStageRefPtr = UsdStageRefPtr());
+    UsdStage(pxr::UsdStageRefPtr usdStageRefPtr = pxr::UsdStageRefPtr());
+
+	LIBUSDPROXY_API
+	UsdStage(pxr::UsdStageRefPtr&& usdStageRefPtr);
 
     LIBUSDPROXY_API
     UsdStage(const UsdStage&) = default;
@@ -43,11 +47,16 @@ public:
 	LIBUSDPROXY_API
 	void SetDefaultPrim(const UsdPrim& prim);
 
-    LIBUSDPROXY_API
-    UsdStageRefPtr& GetPtr();
+	LIBUSDPROXY_API
+	UsdPrim GetDefaultPrim() const;
 
+	LIBUSDPROXY_API
+	UsdPrim OverridePrim(const SdfPath& path);
+
+	LIBUSDPROXY_API
+	const pxr::UsdStageRefPtr& Get() const;
 private:
-    UsdStageRefPtr m_usdStageRefPtr;
+    pxr::UsdStageRefPtr m_usdStageRefPtr;
 };
 
 }

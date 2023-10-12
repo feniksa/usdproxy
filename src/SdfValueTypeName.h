@@ -20,6 +20,7 @@ public:
 		Token,
 		Float2,
 		Vector3f,
+		TexCoord2fArray
 	}; // don't forget to check SdfValueTypeName::convert!
 
 	LIBUSDPROXY_API

@@ -13,7 +13,7 @@ UsdStageWeakPtr::UsdStageWeakPtr(UsdStageRefPtr &usdStageRefPtr)
 }
 
 UsdStageWeakPtr::UsdStageWeakPtr(UsdStage &usdStage)
-	: m_usdStageWeakPtr(usdStage.GetPtr().Get())
+: m_usdStageWeakPtr(usdStage.Get())
 {
 }
 

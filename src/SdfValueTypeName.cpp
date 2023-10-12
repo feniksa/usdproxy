@@ -23,6 +23,8 @@ pxr::SdfValueTypeName convert(SdfValueTypeName::SdfValueTypeNames typeName)
 		return pxr::SdfValueTypeNames->Float2;
 	case SdfValueTypeName::Vector3f:
 		return pxr::SdfValueTypeNames->Vector3f;
+	case SdfValueTypeName::TexCoord2fArray:
+		return pxr::SdfValueTypeNames->TexCoord2fArray;
 	default:
 		return pxr::SdfValueTypeNames->String;
 	}

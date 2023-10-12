@@ -9,6 +9,10 @@ namespace usdproxy
 class UsdStageWeakPtr;
 class SdfPath;
 class UsdRelationship;
+class VtIntArray;
+class VtVec3fArray;
+class VtQuathArray;
+class UsdAttribute;
 
 class UsdGeomPointInstancer
 {
@@ -28,6 +32,15 @@ public:
 
 	LIBUSDPROXY_API
 	UsdRelationship GetPrototypesRel();
+
+	LIBUSDPROXY_API
+	UsdAttribute CreateProtoIndicesAttr(const VtIntArray& value);
+
+	LIBUSDPROXY_API
+	UsdAttribute CreatePositionsAttr(const VtVec3fArray& value);
+
+	LIBUSDPROXY_API
+	UsdAttribute CreateOrientationsAttr(const VtQuathArray&);
 
 	LIBUSDPROXY_API
 	const pxr::UsdGeomPointInstancer& Get() const;

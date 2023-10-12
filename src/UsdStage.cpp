@@ -1,8 +1,11 @@
 #include "UsdStage.h"
 
-#include <pxr/usd/usd/stage.h>
+#include "SdfPath.h"
+#include "UsdPrim.h"
+#include "UsdStageRefPtr.h"
+#include "SdfLayerHandle.h"
 
-PXR_NAMESPACE_USING_DIRECTIVE
+#include <pxr/usd/usd/stage.h>
 
 namespace
 {
@@ -24,35 +27,50 @@ pxr::UsdStage::InitialLoadSet convert(usdproxy::UsdStage::InitialLoadSet load)
 namespace usdproxy
 {
 
-UsdStage::UsdStage(UsdStageRefPtr usdStageRefPtr) : m_usdStageRefPtr(usdStageRefPtr)
+UsdStage::UsdStage(pxr::UsdStageRefPtr &&usdStageRefPtr)
+	: m_usdStageRefPtr(std::move(usdStageRefPtr))
 {
 }
 
-UsdStageRefPtr UsdStage::Open(const std::string& filePath, InitialLoadSet load)
+UsdStage::UsdStage(pxr::UsdStageRefPtr usdStageRefPtr)
+	: m_usdStageRefPtr(usdStageRefPtr)
 {
-    pxr::UsdStageRefPtr stagePtr = pxr::UsdStage::Open(filePath, convert(load));
-    return stagePtr;
+}
+
+UsdStageRefPtr UsdStage::Open(const std::string &filePath, InitialLoadSet load)
+{
+	pxr::UsdStageRefPtr stagePtr = pxr::UsdStage::Open(filePath, convert(load));
+	return stagePtr;
 }
 
 UsdStageRefPtr UsdStage::CreateInMemory()
 {
-    pxr::UsdStageRefPtr stagePtr = pxr::UsdStage::CreateInMemory();
-    return UsdStageRefPtr(stagePtr);
+	return {pxr::UsdStage::CreateInMemory()};
 }
 
 SdfLayerHandle UsdStage::GetRootLayer()
 {
-    return SdfLayerHandle(m_usdStageRefPtr.GetRootLayer());
+	return {m_usdStageRefPtr->GetRootLayer()};
 }
 
-UsdStageRefPtr& UsdStage::GetPtr()
+const pxr::UsdStageRefPtr &UsdStage::Get() const
 {
-    return m_usdStageRefPtr;
+	return m_usdStageRefPtr;
 }
 
-void UsdStage::SetDefaultPrim(const UsdPrim& prim)
+void UsdStage::SetDefaultPrim(const UsdPrim &prim)
 {
-	m_usdStageRefPtr.SetDefaultPrim(prim);
+	m_usdStageRefPtr->SetDefaultPrim(prim.Get());
+}
+
+UsdPrim UsdStage::OverridePrim(const SdfPath &path)
+{
+	return {m_usdStageRefPtr->OverridePrim(path.Get())};
+}
+
+UsdPrim UsdStage::GetDefaultPrim() const
+{
+	return { m_usdStageRefPtr->GetDefaultPrim() };
 }
 
 }

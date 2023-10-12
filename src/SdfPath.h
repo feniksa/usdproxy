@@ -13,10 +13,7 @@ public:
     SdfPath() = default;
 
     LIBUSDPROXY_API
-    SdfPath(const SdfPath&) = default;
-
-    LIBUSDPROXY_API
-    SdfPath(SdfPath&&) noexcept = default;
+    SdfPath(const SdfPath& sdfPath);
 
     LIBUSDPROXY_API
     explicit SdfPath(const pxr::SdfPath& path);
@@ -24,17 +21,11 @@ public:
     LIBUSDPROXY_API
     explicit SdfPath(const std::string& path);
 
-    LIBUSDPROXY_API
-    SdfPath& operator=(const SdfPath&) = default;
-
-    LIBUSDPROXY_API
-    SdfPath& operator=(SdfPath&&) noexcept = default;
-
 	LIBUSDPROXY_API
 	const pxr::SdfPath& Get() const;
 
 	LIBUSDPROXY_API
-	SdfPath AppendElementString(const std::string&);
+	SdfPath AppendElementString(const std::string& element);
 
 	LIBUSDPROXY_API
 	std::string GetAsString() const;

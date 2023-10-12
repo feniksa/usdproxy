@@ -16,6 +16,7 @@ using namespace usdproxy;
 %include "UsdStageRefPtr.i"
 %include "UsdStageWeakPtr.i"
 %include "UsdStagePtr.i"
+%include "UsdReferences.i"
 
 %include "SdfLayerHandle.i"
 %include "UsdStage.i"

@@ -33,6 +33,9 @@ public:
 	LIBUSDPROXY_API
 	SdfPath GetPath() const;
 
+	LIBUSDPROXY_API
+	bool References_AddReference(std::string& identifier, const SdfPath& primPath);
+
 private:
 	pxr::UsdPrim m_usdPrim;
 };

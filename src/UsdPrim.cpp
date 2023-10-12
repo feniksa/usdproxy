@@ -2,6 +2,7 @@
 
 #include "UsdStageWeakPtr.h"
 #include "SdfPath.h"
+#include "UsdReferences.h"
 
 namespace usdproxy
 {
@@ -25,6 +26,13 @@ UsdStageWeakPtr UsdPrim::GetStage() const
 SdfPath UsdPrim::GetPath() const
 {
 	return SdfPath(m_usdPrim.GetPath());
+}
+
+
+bool UsdPrim::References_AddReference(std::string& identifier, const SdfPath& primPath)
+{
+	UsdReferences references(m_usdPrim.GetReferences());
+	return references.AddReference(identifier, primPath);
 }
 
 }

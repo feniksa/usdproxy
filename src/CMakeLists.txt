@@ -8,6 +8,7 @@ set(HEADERS
 	UsdGeomXform.h
 	UsdGeomMesh.h
 	UsdRelationship.h
+	UsdReferences.h
 	SdfLayerHandle.h
 	SdfPath.h
 	SdfAssetPath.h
@@ -48,6 +49,7 @@ set(SOURCES
 	UsdGeomXform.cpp
 	UsdGeomMesh.cpp
 	UsdRelationship.cpp
+	UsdReferences.cpp
 	SdfLayerHandle.cpp
 	SdfPath.cpp
 	SdfAssetPath.cpp

@@ -65,4 +65,17 @@ GfRotation GfMatrix4d::ExtractRotation() const
 	return { m_gfMatrix4d.ExtractRotation() };
 }
 
+GfMatrix4d& GfMatrix4d::SetIdentity()
+{
+	m_gfMatrix4d.SetIdentity();
+
+	return *this;
+}
+
+GfMatrix4d& GfMatrix4d::SetRotate(const GfRotation& rotation)
+{
+	m_gfMatrix4d.SetRotate(rotation.Get());
+	return *this;
+}
+
 }

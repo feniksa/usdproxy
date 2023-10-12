@@ -47,6 +47,8 @@ using namespace usdproxy;
 %include "UsdShadeConnectableAPI.i"
 %include "UsdShadeOutput.i"
 %include "UsdShadeMaterial.i"
+%include "UsdLuxDistantLight.i"
+%include "UsdLuxDomeLight.i"
 %include "UsdRelationship.i"
 %include "UsdTimeCode.i"
 %include "SdfValueTypeName.i"

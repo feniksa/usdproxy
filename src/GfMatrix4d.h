@@ -46,6 +46,12 @@ public:
 	GfRotation ExtractRotation() const;
 
 	LIBUSDPROXY_API
+	GfMatrix4d& SetIdentity();
+
+	LIBUSDPROXY_API
+	GfMatrix4d& SetRotate(const GfRotation& rotation);
+
+	LIBUSDPROXY_API
 	const pxr::GfMatrix4d& Get() const;
 private:
 	pxr::GfMatrix4d m_gfMatrix4d;

@@ -7,6 +7,7 @@ namespace usdproxy
 {
 
 class GfQuatd;
+class GfVec3d;
 
 class GfRotation
 {
@@ -19,6 +20,9 @@ public:
 
 	LIBUSDPROXY_API
 	GfRotation(const pxr::GfRotation& gfRotation);
+
+	LIBUSDPROXY_API
+	explicit GfRotation(const GfVec3d& rotateFrom, const GfVec3d& rotateTo);
 
 	LIBUSDPROXY_API
 	GfQuatd GetQuat() const;

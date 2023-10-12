@@ -41,6 +41,7 @@ set(HEADERS
 	UsdShadeConnectableAPI.h
 	UsdShadeOutput.h
 	UsdLuxDistantLight.h
+	UsdLuxDomeLight.h
 	usdlib.h
 )
 
@@ -86,6 +87,7 @@ set(SOURCES
 	UsdShadeConnectableAPI.cpp
 	UsdShadeOutput.cpp
 	UsdLuxDistantLight.cpp
+	UsdLuxDomeLight.cpp
 	usdlib.cpp
 )
 

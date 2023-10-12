@@ -17,5 +17,4 @@ struct TestUsd : public ::testing::Test
 
 TEST_F(TestUsd, dostage)
 {
-    dostage();
 }

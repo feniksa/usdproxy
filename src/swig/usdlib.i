@@ -27,6 +27,7 @@ using namespace usdproxy;
 %include "UsdGeomScope.i"
 %include "UsdGeomXform.i"
 %include "UsdGeomMesh.i"
+%include "UsdGeomCamera.i"
 %include "GfVec2d.i"
 %include "GfVec2f.i"
 %include "GfMatrix4d.i"
@@ -37,6 +38,7 @@ using namespace usdproxy;
 %include "GfRotation.i"
 %include "GfQuatd.i"
 %include "GfQuath.i"
+%include "GfCamera.i"
 %include "VtVec3fArray.i"
 %include "VtQuathArray.i"
 %include "UsdAttribute.i"
@@ -46,6 +48,7 @@ using namespace usdproxy;
 %include "UsdShadeOutput.i"
 %include "UsdShadeMaterial.i"
 %include "UsdRelationship.i"
+%include "UsdTimeCode.i"
 %include "SdfValueTypeName.i"
 %include "GfHalf.i"
 

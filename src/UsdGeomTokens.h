@@ -16,10 +16,13 @@ public:
 	};
 
 	LIBUSDPROXY_API
-	UsdGeomTokens(Token token = Token::faceVarying);
+	explicit UsdGeomTokens(Token token = Token::faceVarying);
 
 	LIBUSDPROXY_API
-	pxr::TfToken toPxrToken();
+	const pxr::TfToken toPxrToken() const;
+
+	LIBUSDPROXY_API
+	const pxr::TfToken Get() const;
 private:
 	Token m_token; // hide TfToken type
 };

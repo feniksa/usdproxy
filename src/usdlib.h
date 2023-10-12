@@ -8,8 +8,3 @@
 
 namespace usdproxy
 {}
-
-extern "C"
-{
-    LIBUSDPROXY_API int dostage();
-}

@@ -8,7 +8,12 @@ UsdGeomTokens::UsdGeomTokens(Token token)
 {
 }
 
-pxr::TfToken UsdGeomTokens::toPxrToken()
+const pxr::TfToken UsdGeomTokens::Get() const
+{
+	return toPxrToken();
+}
+
+const pxr::TfToken UsdGeomTokens::toPxrToken() const
 {
 	switch (m_token) {
 	case faceVarying:

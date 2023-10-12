@@ -16,6 +16,9 @@ public:
 	GfMatrix4d() = default;
 
 	LIBUSDPROXY_API
+	explicit GfMatrix4d(double* transformation);
+
+	LIBUSDPROXY_API
 	GfMatrix4d(const pxr::GfMatrix4d& m);
 
 	LIBUSDPROXY_API

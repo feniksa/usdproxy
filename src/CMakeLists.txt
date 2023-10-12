@@ -23,6 +23,7 @@ set(HEADERS
 	GfMatrix4d.h
 	GfQuatd.h
 	GfHalf.h
+	GfCamera.h
 	VtVec3fArray.h
 	VtQuathArray.h
 	TfToken.h
@@ -30,7 +31,9 @@ set(HEADERS
 	UsdGeomPointInstancer.h
 	UsdGeomTokens.h
 	UsdGeomPrimvar.h
+	UsdGeomCamera.h
 	UsdAttribute.h
+	UsdTimeCode.h
 	SdfValueTypeName.h
 	UsdShadeInput.h
 	UsdShadeShader.h
@@ -65,6 +68,7 @@ set(SOURCES
 	GfRotation.cpp
 	GfMatrix4d.cpp
 	GfQuatd.cpp
+	GfCamera.cpp
 	VtVec3fArray.cpp
 	TfToken.cpp
 	UsdPrim.cpp
@@ -72,6 +76,8 @@ set(SOURCES
 	UsdGeomTokens.cpp
 	UsdGeomPrimvar.cpp
 	UsdAttribute.cpp
+	UsdTimeCode.cpp
+	UsdGeomCamera.cpp
 	SdfValueTypeName.cpp
 	UsdShadeInput.cpp
 	UsdShadeShader.cpp

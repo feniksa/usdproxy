@@ -18,6 +18,9 @@ public:
 	LIBUSDPROXY_API
 	void push_back(const GfVec2f& point);
 
+	LIBUSDPROXY_API
+	const pxr::VtVec2fArray& Get() const;
+
 private:
 	pxr::VtVec2fArray m_vtVec2fArray;
 };

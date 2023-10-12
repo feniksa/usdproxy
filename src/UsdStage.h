@@ -57,6 +57,9 @@ public:
 	bool RemovePrim(const SdfPath& path);
 
 	LIBUSDPROXY_API
+	std::string ExportToString() const;
+
+	LIBUSDPROXY_API
 	const pxr::UsdStageRefPtr& Get() const;
 private:
     pxr::UsdStageRefPtr m_usdStageRefPtr;

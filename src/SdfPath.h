@@ -37,7 +37,7 @@ public:
 	SdfPath AppendElementString(const std::string&);
 
 	LIBUSDPROXY_API
-	std::string ToString() const;
+	std::string GetAsString() const;
 
 private:
     pxr::SdfPath m_sdfPath;

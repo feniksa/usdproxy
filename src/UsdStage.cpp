@@ -77,4 +77,13 @@ bool UsdStage::RemovePrim(const SdfPath& path)
 {
 	return m_usdStageRefPtr->RemovePrim(path.Get());
 }
+
+std::string UsdStage::ExportToString() const
+{
+	std::string result;
+	m_usdStageRefPtr->ExportToString(&result);
+
+	return result;
+}
+
 }

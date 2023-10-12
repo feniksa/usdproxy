@@ -13,13 +13,13 @@ using namespace usdproxy;
 %include "UsdPrim.i"
 %include "TfToken.i"
 
+%include "UsdStage.i"
 %include "UsdStageRefPtr.i"
 %include "UsdStageWeakPtr.i"
 %include "UsdStagePtr.i"
 %include "UsdReferences.i"
 
 %include "SdfLayerHandle.i"
-%include "UsdStage.i"
 %include "SdfPath.i"
 %include "SdfAssetPath.i"
 %include "UsdGeomXformOp.i"

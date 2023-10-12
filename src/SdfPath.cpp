@@ -22,7 +22,7 @@ SdfPath SdfPath::AppendElementString(const std::string& s)
 	return SdfPath(m_sdfPath.AppendElementString(s));
 }
 
-std::string SdfPath::ToString() const
+std::string SdfPath::GetAsString() const
 {
 	return m_sdfPath.GetAsString();
 }

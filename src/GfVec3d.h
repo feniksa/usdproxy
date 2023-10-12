@@ -31,6 +31,9 @@ public:
 	LIBUSDPROXY_API
 	double Value(int index) const;
 
+	LIBUSDPROXY_API
+	static
+	GfVec3d ZAxis();
 
 	LIBUSDPROXY_API
 	const pxr::GfVec3d& Get() const;

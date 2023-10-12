@@ -15,6 +15,11 @@ GfRotation::GfRotation(const GfVec3d& rotateFrom, const GfVec3d& rotateTo)
 {
 }
 
+GfRotation::GfRotation(const GfVec3d& axis, double angle)
+: m_gfRotation(axis.Get(), angle)
+{
+}
+
 const pxr::GfRotation &GfRotation::Get() const
 {
 	return m_gfRotation;

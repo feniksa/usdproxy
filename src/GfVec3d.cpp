@@ -32,4 +32,9 @@ double GfVec3d::Value(int index) const
 	return this->operator[](index);
 }
 
+GfVec3d GfVec3d::ZAxis()
+{
+	return { pxr::GfVec3d::ZAxis() };
+}
+
 }

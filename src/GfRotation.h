@@ -25,6 +25,9 @@ public:
 	explicit GfRotation(const GfVec3d& rotateFrom, const GfVec3d& rotateTo);
 
 	LIBUSDPROXY_API
+	explicit GfRotation(const GfVec3d& axis, double angle);
+
+	LIBUSDPROXY_API
 	GfQuatd GetQuat() const;
 
 	LIBUSDPROXY_API

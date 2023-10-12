@@ -78,4 +78,10 @@ GfMatrix4d& GfMatrix4d::SetRotate(const GfRotation& rotation)
 	return *this;
 }
 
+GfMatrix4d& GfMatrix4d::SetScale(double scaleFactor)
+{
+	m_gfMatrix4d.SetScale(scaleFactor);
+	return *this;
+}
+
 }

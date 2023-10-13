@@ -22,13 +22,16 @@ public:
     };
 
     LIBUSDPROXY_API
-    UsdStage(pxr::UsdStageRefPtr usdStageRefPtr = pxr::UsdStageRefPtr());
+    UsdStage() = default;
 
 	LIBUSDPROXY_API
 	UsdStage(pxr::UsdStageRefPtr&& usdStageRefPtr);
 
     LIBUSDPROXY_API
-    UsdStage(const UsdStage&) = default;
+    UsdStage(const UsdStage& usdStage);
+
+	LIBUSDPROXY_API
+	UsdStage& operator=(const UsdStage& usdStage);
 
     LIBUSDPROXY_API
     UsdStage(UsdStage&&) noexcept = default;
@@ -39,7 +42,7 @@ public:
 
     LIBUSDPROXY_API
     static
-    UsdStageRefPtr CreateInMemory();
+    UsdStage CreateInMemory();
 
     LIBUSDPROXY_API
     SdfLayerHandle GetRootLayer();

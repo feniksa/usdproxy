@@ -28,12 +28,7 @@ namespace usdproxy
 {
 
 UsdStage::UsdStage(pxr::UsdStageRefPtr &&usdStageRefPtr)
-	: m_usdStageRefPtr(std::move(usdStageRefPtr))
-{
-}
-
-UsdStage::UsdStage(pxr::UsdStageRefPtr usdStageRefPtr)
-	: m_usdStageRefPtr(usdStageRefPtr)
+: m_usdStageRefPtr(usdStageRefPtr)
 {
 }
 
@@ -43,9 +38,9 @@ UsdStageRefPtr UsdStage::Open(const std::string &filePath, InitialLoadSet load)
 	return stagePtr;
 }
 
-UsdStageRefPtr UsdStage::CreateInMemory()
+UsdStage UsdStage::CreateInMemory()
 {
-	return {pxr::UsdStage::CreateInMemory()};
+	return pxr::UsdStage::CreateInMemory();
 }
 
 SdfLayerHandle UsdStage::GetRootLayer()
@@ -76,6 +71,22 @@ UsdPrim UsdStage::GetDefaultPrim() const
 bool UsdStage::RemovePrim(const SdfPath& path)
 {
 	return m_usdStageRefPtr->RemovePrim(path.Get());
+}
+
+
+UsdStage::UsdStage(const UsdStage& usdStage)
+: m_usdStageRefPtr(usdStage.m_usdStageRefPtr)
+{
+}
+
+UsdStage& UsdStage::operator=(const UsdStage& usdStage)
+{
+	if (this == &usdStage)
+		return *this;
+
+	m_usdStageRefPtr = usdStage.m_usdStageRefPtr;
+
+	return *this;
 }
 
 std::string UsdStage::ExportToString() const

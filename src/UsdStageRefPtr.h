@@ -24,7 +24,7 @@ public:
     void Traverse() const;
 
     LIBUSDPROXY_API
-    pxr::UsdStageRefPtr& Get();
+    const pxr::UsdStageRefPtr& Get() const;
 
 	LIBUSDPROXY_API
 	void SetDefaultPrim(const UsdPrim& prim);

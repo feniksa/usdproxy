@@ -7,7 +7,7 @@
 namespace usdproxy
 {
 
-UsdStageWeakPtr::UsdStageWeakPtr(UsdStageRefPtr &usdStageRefPtr)
+UsdStageWeakPtr::UsdStageWeakPtr(const UsdStageRefPtr& usdStageRefPtr)
 : m_usdStageWeakPtr(usdStageRefPtr.Get())
 {
 }
@@ -17,7 +17,7 @@ UsdStageWeakPtr::UsdStageWeakPtr(const UsdStageWeakPtr& usdStageWeakPtr)
 {
 }
 
-UsdStageWeakPtr::UsdStageWeakPtr(UsdStage &usdStage)
+UsdStageWeakPtr::UsdStageWeakPtr(const UsdStage &usdStage)
 : m_usdStageWeakPtr(usdStage.Get())
 {
 }

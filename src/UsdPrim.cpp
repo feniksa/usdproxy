@@ -7,12 +7,12 @@
 namespace usdproxy
 {
 
-const pxr::UsdPrim& UsdPrim::Get() const
+UsdPrim::UsdPrim(const UsdPrim& usdPrim)
+: m_usdPrim(usdPrim.m_usdPrim)
 {
-	return m_usdPrim;
 }
 
-UsdPrim::UsdPrim(pxr::UsdPrim&& usdPrim) noexcept
+UsdPrim::UsdPrim(const pxr::UsdPrim& usdPrim)
 : m_usdPrim(usdPrim)
 {
 }
@@ -27,10 +27,17 @@ SdfPath UsdPrim::GetPath() const
 	return SdfPath(m_usdPrim.GetPath());
 }
 
+const pxr::UsdPrim& UsdPrim::Get() const
+{
+	return m_usdPrim;
+}
+
 bool UsdPrim::GetReferences_AddReference(const std::string& identifier, const SdfPath& primPath)
 {
 	UsdReferences references(m_usdPrim.GetReferences());
 	return references.AddReference(identifier, primPath);
 }
+
+
 
 }

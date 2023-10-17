@@ -24,10 +24,10 @@ public:
 	UsdStageWeakPtr(const pxr::UsdStageWeakPtr& usdStageWeakPtr);
 
     LIBUSDPROXY_API
-    UsdStageWeakPtr(UsdStage& usdStageRefPtr);
+    UsdStageWeakPtr(const UsdStage& usdStageRefPtr);
 
     LIBUSDPROXY_API
-    UsdStageWeakPtr(UsdStageRefPtr& usdStageRefPtr);
+    UsdStageWeakPtr(const UsdStageRefPtr& usdStageRefPtr);
 
     LIBUSDPROXY_API
     bool HasDefaultPrim() const;

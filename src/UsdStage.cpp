@@ -27,7 +27,7 @@ pxr::UsdStage::InitialLoadSet convert(usdproxy::UsdStage::InitialLoadSet load)
 namespace usdproxy
 {
 
-UsdStage::UsdStage(pxr::UsdStageRefPtr &&usdStageRefPtr)
+UsdStage::UsdStage(const pxr::UsdStageRefPtr& usdStageRefPtr)
 : m_usdStageRefPtr(usdStageRefPtr)
 {
 }

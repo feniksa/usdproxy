@@ -17,10 +17,10 @@ public:
 	UsdPrim() = default;
 
 	LIBUSDPROXY_API
-	UsdPrim(const UsdPrim&) = default;
+	UsdPrim(const UsdPrim& usdPrim);
 
 	LIBUSDPROXY_API
-	UsdPrim(pxr::UsdPrim&& usdPrim) noexcept;
+	UsdPrim(const pxr::UsdPrim& usdPrim);
 
 	LIBUSDPROXY_API
 	const pxr::UsdPrim& Get() const;

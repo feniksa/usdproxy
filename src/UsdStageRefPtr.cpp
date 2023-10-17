@@ -25,7 +25,7 @@ bool UsdStageRefPtr::IsOpened() const
 }
 
 
-pxr::UsdStageRefPtr& UsdStageRefPtr::Get()
+const pxr::UsdStageRefPtr& UsdStageRefPtr::Get() const
 {
     return m_ptr;
 }

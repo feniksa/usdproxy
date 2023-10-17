@@ -25,11 +25,10 @@ public:
     UsdStage() = default;
 
 	LIBUSDPROXY_API
-	UsdStage(pxr::UsdStageRefPtr&& usdStageRefPtr);
+	UsdStage(const pxr::UsdStageRefPtr& usdStageRefPtr);
 
     LIBUSDPROXY_API
     UsdStage(const UsdStage& usdStage);
-
 
     LIBUSDPROXY_API
     static

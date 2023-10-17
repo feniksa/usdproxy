@@ -24,7 +24,7 @@ public:
 	UsdGeomPointInstancer(const UsdGeomPointInstancer&) = default;
 
 	LIBUSDPROXY_API
-	UsdGeomPointInstancer(pxr::UsdGeomPointInstancer&& usdGeomPointInstancer);
+	UsdGeomPointInstancer(const pxr::UsdGeomPointInstancer& usdGeomPointInstancer);
 
 	LIBUSDPROXY_API
 	static

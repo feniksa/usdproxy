@@ -9,7 +9,7 @@ class UsdShadeConnectableAPI
 {
 public:
 	LIBUSDPROXY_API
-	UsdShadeConnectableAPI(pxr::UsdShadeConnectableAPI&& usdShadeConnectableAPI);
+	UsdShadeConnectableAPI(const pxr::UsdShadeConnectableAPI& usdShadeConnectableAPI);
 
 	LIBUSDPROXY_API
 	const pxr::UsdShadeConnectableAPI& Get() const;

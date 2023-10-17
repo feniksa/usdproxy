@@ -30,11 +30,6 @@ public:
     LIBUSDPROXY_API
     UsdStage(const UsdStage& usdStage);
 
-	LIBUSDPROXY_API
-	UsdStage& operator=(const UsdStage& usdStage);
-
-    LIBUSDPROXY_API
-    UsdStage(UsdStage&&) noexcept = default;
 
     LIBUSDPROXY_API
     static

@@ -78,16 +78,6 @@ UsdStage::UsdStage(const UsdStage& usdStage)
 {
 }
 
-UsdStage& UsdStage::operator=(const UsdStage& usdStage)
-{
-	if (this == &usdStage)
-		return *this;
-
-	m_usdStageRefPtr = usdStage.m_usdStageRefPtr;
-
-	return *this;
-}
-
 std::string UsdStage::ExportToString() const
 {
 	std::string result;

@@ -5,8 +5,8 @@
 namespace usdproxy
 {
 
-UsdGeomPrimvar::UsdGeomPrimvar(pxr::UsdGeomPrimvar&& usdGeomPrimvar)
-: m_usdGeomPrimvar(std::move(usdGeomPrimvar))
+UsdGeomPrimvar::UsdGeomPrimvar(const pxr::UsdGeomPrimvar& usdGeomPrimvar)
+: m_usdGeomPrimvar(usdGeomPrimvar)
 {
 }
 

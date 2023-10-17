@@ -8,7 +8,12 @@ namespace usdproxy
 {
 
 UsdStageWeakPtr::UsdStageWeakPtr(UsdStageRefPtr &usdStageRefPtr)
-	: m_usdStageWeakPtr(usdStageRefPtr.Get())
+: m_usdStageWeakPtr(usdStageRefPtr.Get())
+{
+}
+
+UsdStageWeakPtr::UsdStageWeakPtr(const UsdStageWeakPtr& usdStageWeakPtr)
+: m_usdStageWeakPtr(usdStageWeakPtr.m_usdStageWeakPtr)
 {
 }
 
@@ -17,26 +22,9 @@ UsdStageWeakPtr::UsdStageWeakPtr(UsdStage &usdStage)
 {
 }
 
-UsdStageWeakPtr::UsdStageWeakPtr(pxr::UsdStageWeakPtr&& usdStageWeakPtr)
-: m_usdStageWeakPtr(std::move(usdStageWeakPtr))
+UsdStageWeakPtr::UsdStageWeakPtr(const pxr::UsdStageWeakPtr& usdStageWeakPtr)
+: m_usdStageWeakPtr(usdStageWeakPtr)
 {
-}
-
-
-UsdStageWeakPtr::UsdStageWeakPtr(UsdStageWeakPtr&& other) noexcept
-: m_usdStageWeakPtr(std::move(other.m_usdStageWeakPtr))
-{
-}
-
-UsdStageWeakPtr& UsdStageWeakPtr::operator=(UsdStageWeakPtr&& other) noexcept
-{
-	if (this == &other)
-		return *this;
-
-	std::swap(m_usdStageWeakPtr, other.m_usdStageWeakPtr);
-	other.m_usdStageWeakPtr.Reset();
-
-	return *this;
 }
 
 bool UsdStageWeakPtr::HasDefaultPrim() const

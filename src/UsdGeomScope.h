@@ -14,7 +14,7 @@ class UsdGeomScope
 {
 public:
 	LIBUSDPROXY_API
-	explicit UsdGeomScope(pxr::UsdGeomScope&& usdGeomScope);
+	explicit UsdGeomScope(const pxr::UsdGeomScope& usdGeomScope);
 
 	LIBUSDPROXY_API
 	explicit UsdGeomScope(const UsdPrim& prim = UsdPrim());

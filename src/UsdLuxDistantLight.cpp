@@ -5,7 +5,7 @@
 
 namespace usdproxy
 {
-UsdLuxDistantLight::UsdLuxDistantLight(pxr::UsdLuxDistantLight&& usdLuxDistantLight)
+UsdLuxDistantLight::UsdLuxDistantLight(const pxr::UsdLuxDistantLight& usdLuxDistantLight)
 : m_usdLuxDistantLight(usdLuxDistantLight)
 {
 }

@@ -18,9 +18,6 @@ public:
 	UsdAttribute(const pxr::UsdAttribute& usdAttribute);
 
 	LIBUSDPROXY_API
-	UsdAttribute(pxr::UsdAttribute&& usdAttribute);
-
-	LIBUSDPROXY_API
 	bool Set(const VtVec2fArray& array);
 private:
 	pxr::UsdAttribute m_usdAttribute;

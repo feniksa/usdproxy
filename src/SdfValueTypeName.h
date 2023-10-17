@@ -27,7 +27,7 @@ public:
 	SdfValueTypeName() = default;
 
 	LIBUSDPROXY_API
-	SdfValueTypeName(pxr::SdfValueTypeName&& typeName);
+	SdfValueTypeName(const pxr::SdfValueTypeName& typeName);
 
 	LIBUSDPROXY_API
 	SdfValueTypeName(SdfValueTypeNames typeName);

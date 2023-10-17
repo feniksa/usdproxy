@@ -17,9 +17,6 @@ public:
 	VtIntArray(const VtIntArray& other);
 
 	LIBUSDPROXY_API
-	VtIntArray(VtIntArray&& other) noexcept;
-
-	LIBUSDPROXY_API
 	void push_back(int data);
 
 	LIBUSDPROXY_API

@@ -19,7 +19,7 @@ public:
 	GfCamera() = default;
 
 	LIBUSDPROXY_API
-	GfCamera(pxr::GfCamera&& gfCamera);
+	GfCamera(const pxr::GfCamera& gfCamera);
 
 	LIBUSDPROXY_API
 	void SetOrthographicFromAspectRatioAndSize(float aspectRatio, float orthographicSize, FOVDirection direction);

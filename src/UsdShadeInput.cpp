@@ -7,7 +7,7 @@
 namespace usdproxy
 {
 
-UsdShadeInput::UsdShadeInput(pxr::UsdShadeInput&& usdShadeInput)
+UsdShadeInput::UsdShadeInput(const pxr::UsdShadeInput& usdShadeInput)
 : m_usdShadeInput(std::move(usdShadeInput))
 {
 }

@@ -19,7 +19,7 @@ public:
 	UsdLuxDomeLight() = default;
 
 	LIBUSDPROXY_API
-	UsdLuxDomeLight(pxr::UsdLuxDomeLight&& usdLuxDomeLight);
+	UsdLuxDomeLight(const pxr::UsdLuxDomeLight& usdLuxDomeLight);
 
 	LIBUSDPROXY_API
 	static

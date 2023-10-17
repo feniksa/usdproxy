@@ -8,11 +8,6 @@ VtIntArray::VtIntArray(const VtIntArray& other)
 {
 }
 
-VtIntArray::VtIntArray(VtIntArray&& other) noexcept
-{
-	std::swap(m_vtIntArray, other.m_vtIntArray);
-}
-
 void VtIntArray::push_back(int data)
 {
 	m_vtIntArray.push_back(data);

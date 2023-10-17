@@ -8,7 +8,7 @@
 namespace usdproxy
 {
 
-UsdLuxDomeLight::UsdLuxDomeLight(pxr::UsdLuxDomeLight&& usdLuxDomeLight)
+UsdLuxDomeLight::UsdLuxDomeLight(const pxr::UsdLuxDomeLight& usdLuxDomeLight)
 : m_usdLuxDomeLight(usdLuxDomeLight)
 {
 }

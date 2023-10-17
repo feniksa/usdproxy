@@ -17,7 +17,7 @@ public:
 	explicit UsdGeomXformOp() = default;
 
 	LIBUSDPROXY_API
-	UsdGeomXformOp(pxr::UsdGeomXformOp&& usdGeomXformOp) noexcept;
+	UsdGeomXformOp(const pxr::UsdGeomXformOp& usdGeomXformOp);
 
 	LIBUSDPROXY_API
 	bool Set(const GfMatrix4d& matrix);

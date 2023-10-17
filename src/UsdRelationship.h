@@ -14,7 +14,7 @@ public:
 	UsdRelationship() = default;
 
 	LIBUSDPROXY_API
-	UsdRelationship(pxr::UsdRelationship&& usdRelationship);
+	UsdRelationship(const pxr::UsdRelationship& usdRelationship);
 
 	LIBUSDPROXY_API
 	bool AddTarget(const SdfPath& path);

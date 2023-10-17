@@ -18,11 +18,6 @@ GfQuath::GfQuath(float real, float i, float j, float k)
 {
 }
 
-GfQuath::GfQuath::GfQuath(pxr::GfQuath&& gfQuath)
-: m_gfQuath(std::move(gfQuath))
-{
-}
-
 GfQuath::GfQuath(const pxr::GfQuath& gfQuath)
 : m_gfQuath(gfQuath)
 {

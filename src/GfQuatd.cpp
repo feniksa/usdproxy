@@ -4,8 +4,8 @@
 namespace usdproxy
 {
 
-GfQuatd::GfQuatd(pxr::GfQuatd&& gfQuatd)
-: m_gfQuatd(std::move(gfQuatd))
+GfQuatd::GfQuatd(const pxr::GfQuatd& gfQuatd)
+: m_gfQuatd(gfQuatd)
 {
 
 }

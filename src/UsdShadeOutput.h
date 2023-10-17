@@ -13,7 +13,7 @@ class UsdShadeOutput
 {
 public:
 	LIBUSDPROXY_API
-	UsdShadeOutput(pxr::UsdShadeOutput&& usdShadeOutput);
+	UsdShadeOutput(const pxr::UsdShadeOutput& usdShadeOutput);
 
 	LIBUSDPROXY_API
 	bool ConnectToSource(const UsdShadeConnectableAPI& api, const TfToken& path);

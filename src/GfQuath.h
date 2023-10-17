@@ -25,9 +25,6 @@ public:
 	GfQuath(float real, float i, float j, float k);
 
 	LIBUSDPROXY_API
-	GfQuath(pxr::GfQuath&& gfQuath);
-
-	LIBUSDPROXY_API
 	GfQuath(const pxr::GfQuath& gfQuath);
 
 	LIBUSDPROXY_API

@@ -4,16 +4,14 @@
 
 namespace usdproxy
 {
-
-UsdGeomXform::UsdGeomXform(pxr::UsdGeomXform&& usdGeomXform)
+UsdGeomXform::UsdGeomXform(const pxr::UsdGeomXform& usdGeomXform)
 : m_usdGeomXform(usdGeomXform)
 {
 }
 
 UsdGeomXform UsdGeomXform::Define(UsdStageWeakPtr& stage, const SdfPath& path)
 {
-	pxr::UsdGeomXform usdGeomXform(pxr::UsdGeomXform::Define(stage.Get(), path.Get()));
-	return UsdGeomXform(std::move(usdGeomXform));
+	return UsdGeomXform(pxr::UsdGeomXform::Define(stage.Get(), path.Get()));
 }
 
 SdfPath UsdGeomXform::GetPath() const

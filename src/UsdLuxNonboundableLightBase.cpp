@@ -8,7 +8,7 @@
 namespace usdproxy
 {
 
-UsdLuxNonboundableLightBase::UsdLuxNonboundableLightBase(pxr::UsdLuxNonboundableLightBase&& usdLuxNonboundableLightBase)
+UsdLuxNonboundableLightBase::UsdLuxNonboundableLightBase(const pxr::UsdLuxNonboundableLightBase& usdLuxNonboundableLightBase)
 : m_usdLuxNonboundableLightBase(usdLuxNonboundableLightBase)
 {
 }

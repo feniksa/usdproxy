@@ -20,15 +20,14 @@ UsdGeomMesh::UsdGeomMesh()
 {
 }
 
-UsdGeomMesh::UsdGeomMesh(pxr::UsdGeomMesh&& usdGeomMesh)
+UsdGeomMesh::UsdGeomMesh(const pxr::UsdGeomMesh& usdGeomMesh)
 : m_usdGeomMesh(usdGeomMesh)
 {
 }
 
 UsdGeomMesh UsdGeomMesh::Define(const UsdStageWeakPtr& stage, const SdfPath& path)
 {
-	pxr::UsdGeomMesh usdGeomMesh = pxr::UsdGeomMesh::Define(stage.Get(), path.Get());
-	return UsdGeomMesh(std::move(usdGeomMesh));
+	return UsdGeomMesh(pxr::UsdGeomMesh::Define(stage.Get(), path.Get()));
 }
 
 UsdAttribute UsdGeomMesh::CreateFaceVertexIndicesAttr(const VtIntArray& vtIntArray, bool writeSparsely)

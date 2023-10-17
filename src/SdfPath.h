@@ -16,13 +16,10 @@ public:
     SdfPath(const SdfPath& sdfPath);
 
     LIBUSDPROXY_API
-    explicit SdfPath(const pxr::SdfPath& path);
-
-	LIBUSDPROXY_API
-	SdfPath(const pxr::SdfPath&& path);
+    SdfPath(const pxr::SdfPath& path);
 
     LIBUSDPROXY_API
-    explicit SdfPath(const std::string& path);
+    SdfPath(const std::string& path);
 
 	LIBUSDPROXY_API
 	const pxr::SdfPath& Get() const;

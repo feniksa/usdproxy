@@ -17,7 +17,7 @@ public:
 	UsdLuxDistantLight() = default;
 
 	LIBUSDPROXY_API
-	UsdLuxDistantLight(pxr::UsdLuxDistantLight&& usdLuxDistantLight);
+	UsdLuxDistantLight(const pxr::UsdLuxDistantLight& usdLuxDistantLight);
 
 	LIBUSDPROXY_API
 	static

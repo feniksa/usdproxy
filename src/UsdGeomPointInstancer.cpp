@@ -10,8 +10,8 @@
 namespace usdproxy
 {
 
-UsdGeomPointInstancer::UsdGeomPointInstancer(pxr::UsdGeomPointInstancer&& usdGeomPointInstancer)
-: m_usdGeomPointInstancer(std::move(usdGeomPointInstancer))
+UsdGeomPointInstancer::UsdGeomPointInstancer(const pxr::UsdGeomPointInstancer& usdGeomPointInstancer)
+: m_usdGeomPointInstancer(usdGeomPointInstancer)
 {
 }
 

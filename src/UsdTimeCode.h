@@ -16,7 +16,7 @@ public:
 	explicit UsdTimeCode(double time);
 
 	LIBUSDPROXY_API
-	UsdTimeCode(pxr::UsdTimeCode&& usdTimeCode);
+	UsdTimeCode(const pxr::UsdTimeCode& usdTimeCode);
 
 	LIBUSDPROXY_API
 	const pxr::UsdTimeCode& Get() const;

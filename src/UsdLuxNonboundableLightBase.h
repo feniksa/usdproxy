@@ -19,7 +19,7 @@ public:
 	UsdLuxNonboundableLightBase() = default;
 
 	LIBUSDPROXY_API
-	UsdLuxNonboundableLightBase(pxr::UsdLuxNonboundableLightBase&& usdLuxNonboundableLightBase);
+	UsdLuxNonboundableLightBase(const pxr::UsdLuxNonboundableLightBase& usdLuxNonboundableLightBase);
 
 	LIBUSDPROXY_API
 	static

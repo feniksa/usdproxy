@@ -12,7 +12,7 @@ UsdShadeMaterial::UsdShadeMaterial()
 {
 }
 
-UsdShadeMaterial::UsdShadeMaterial(pxr::UsdShadeMaterial&& usdShadeMaterial)
+UsdShadeMaterial::UsdShadeMaterial(const pxr::UsdShadeMaterial& usdShadeMaterial)
 : m_usdShadeMaterial(usdShadeMaterial)
 {
 }

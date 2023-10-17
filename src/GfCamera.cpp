@@ -19,7 +19,7 @@ pxr::GfCamera::FOVDirection convertToPxr(usdproxy::GfCamera::FOVDirection direct
 
 namespace usdproxy
 {
-GfCamera::GfCamera(pxr::GfCamera&& gfCamera)
+GfCamera::GfCamera(const pxr::GfCamera& gfCamera)
 : m_gfCamera(gfCamera)
 {
 }

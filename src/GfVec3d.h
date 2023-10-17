@@ -17,16 +17,10 @@ public:
 	explicit GfVec3d(const GfVec3d&) = default;
 
 	LIBUSDPROXY_API
-	GfVec3d(pxr::GfVec3d&& gfVec3D);
-
-	LIBUSDPROXY_API
 	GfVec3d(const pxr::GfVec3d& gfVec3D);
 
 	LIBUSDPROXY_API
 	explicit GfVec3d(double x, double y, double z);
-
-	LIBUSDPROXY_API
-	double operator[](int index) const;
 
 	LIBUSDPROXY_API
 	double Value(int index) const;

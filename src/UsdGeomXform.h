@@ -19,17 +19,14 @@ public:
 	explicit UsdGeomXform() = default;
 
 	LIBUSDPROXY_API
+	UsdGeomXform(const pxr::UsdGeomXform& usdGeomXform);
+
+	LIBUSDPROXY_API
 	static
 	UsdGeomXform Define(UsdStageWeakPtr& stage, const SdfPath& path);
 
 	LIBUSDPROXY_API
-	explicit UsdGeomXform(pxr::UsdGeomXform&& usdGeomXform);
-
-	LIBUSDPROXY_API
-	explicit UsdGeomXform(const UsdGeomXform&) = default;
-
-	LIBUSDPROXY_API
-	UsdGeomXform& operator=(const UsdGeomXform& other) = default;
+	UsdGeomXform(const UsdGeomXform&) = default;
 
 	LIBUSDPROXY_API
 	UsdGeomXformOp AddTransformOp() const;

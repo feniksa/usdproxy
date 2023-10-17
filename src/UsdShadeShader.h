@@ -19,7 +19,7 @@ class UsdShadeShader
 {
 public:
 	LIBUSDPROXY_API
-	UsdShadeShader(pxr::UsdShadeShader&& usdShadeShader);
+	UsdShadeShader(const pxr::UsdShadeShader& usdShadeShader);
 
 	LIBUSDPROXY_API
 	static

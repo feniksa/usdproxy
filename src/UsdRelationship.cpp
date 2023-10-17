@@ -4,8 +4,8 @@
 namespace usdproxy
 {
 
-UsdRelationship::UsdRelationship(pxr::UsdRelationship&& usdRelationship)
-: m_usdRelationShip(std::move(usdRelationship))
+UsdRelationship::UsdRelationship(const pxr::UsdRelationship& usdRelationship)
+: m_usdRelationShip(usdRelationship)
 {
 }
 

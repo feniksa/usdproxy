@@ -18,22 +18,16 @@ public:
     UsdStageWeakPtr() = default;
 
     LIBUSDPROXY_API
-    UsdStageWeakPtr(const UsdStageWeakPtr&) = default;
+    UsdStageWeakPtr(const UsdStageWeakPtr& usdStageWeakPtr);
 
-    LIBUSDPROXY_API
-    UsdStageWeakPtr(UsdStageWeakPtr&&) noexcept;
+	LIBUSDPROXY_API
+	UsdStageWeakPtr(const pxr::UsdStageWeakPtr& usdStageWeakPtr);
 
     LIBUSDPROXY_API
     UsdStageWeakPtr(UsdStage& usdStageRefPtr);
 
     LIBUSDPROXY_API
     UsdStageWeakPtr(UsdStageRefPtr& usdStageRefPtr);
-
-	LIBUSDPROXY_API
-	UsdStageWeakPtr(pxr::UsdStageWeakPtr&& usdStageWeakPtr);
-
-	LIBUSDPROXY_API
-	UsdStageWeakPtr& operator=(UsdStageWeakPtr&&) noexcept;
 
     LIBUSDPROXY_API
     bool HasDefaultPrim() const;

@@ -30,8 +30,8 @@ pxr::SdfValueTypeName convert(SdfValueTypeName::SdfValueTypeNames typeName)
 	}
 }
 
-SdfValueTypeName::SdfValueTypeName(pxr::SdfValueTypeName&& typeName)
-: m_sdfValueTypeName(std::move(typeName))
+SdfValueTypeName::SdfValueTypeName(const pxr::SdfValueTypeName& typeName)
+: m_sdfValueTypeName(typeName)
 {
 
 }

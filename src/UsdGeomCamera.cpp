@@ -10,8 +10,8 @@
 namespace usdproxy
 {
 
-UsdGeomCamera::UsdGeomCamera(pxr::UsdGeomCamera&& usdGeomCamera)
-: m_usdGeomCamera(std::move(usdGeomCamera))
+UsdGeomCamera::UsdGeomCamera(const pxr::UsdGeomCamera& usdGeomCamera)
+: m_usdGeomCamera(usdGeomCamera)
 {
 }
 

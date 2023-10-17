@@ -5,7 +5,7 @@
 namespace usdproxy
 {
 
-UsdGeomScope::UsdGeomScope(pxr::UsdGeomScope&& usdGeomScope)
+UsdGeomScope::UsdGeomScope(const pxr::UsdGeomScope& usdGeomScope)
 : m_usdGeomScope(usdGeomScope)
 {
 }

@@ -4,11 +4,6 @@
 namespace usdproxy
 {
 
-UsdAttribute::UsdAttribute(pxr::UsdAttribute&& usdAttribute)
-: m_usdAttribute(std::move(usdAttribute))
-{
-}
-
 UsdAttribute::UsdAttribute(const pxr::UsdAttribute& usdAttribute)
 : m_usdAttribute(usdAttribute)
 {

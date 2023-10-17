@@ -25,7 +25,7 @@ public:
 	UsdGeomMesh();
 
 	LIBUSDPROXY_API
-	explicit UsdGeomMesh(pxr::UsdGeomMesh&& usdGeomMesh);
+	UsdGeomMesh(const pxr::UsdGeomMesh& usdGeomMesh);
 
 	LIBUSDPROXY_API
 	static

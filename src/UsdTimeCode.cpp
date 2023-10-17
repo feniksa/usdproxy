@@ -7,7 +7,7 @@ UsdTimeCode::UsdTimeCode(double time)
 {
 }
 
-UsdTimeCode::UsdTimeCode(pxr::UsdTimeCode &&usdTimeCode)
+UsdTimeCode::UsdTimeCode(const pxr::UsdTimeCode& usdTimeCode)
 : m_usdTimeCode(usdTimeCode)
 {
 }

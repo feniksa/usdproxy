@@ -18,7 +18,7 @@ public:
 	UsdShadeInput() = default;
 
 	LIBUSDPROXY_API
-	UsdShadeInput(pxr::UsdShadeInput&& usdShadeInput);
+	UsdShadeInput(const pxr::UsdShadeInput& usdShadeInput);
 
 	LIBUSDPROXY_API
 	void ConnectToSource(const UsdShadeOutput&);

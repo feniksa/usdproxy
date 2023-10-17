@@ -22,7 +22,7 @@ public:
 	UsdGeomCamera() = default;
 
 	LIBUSDPROXY_API
-	UsdGeomCamera(pxr::UsdGeomCamera&& usdGeomCamera);
+	UsdGeomCamera(const pxr::UsdGeomCamera& usdGeomCamera);
 
 	LIBUSDPROXY_API
 	static

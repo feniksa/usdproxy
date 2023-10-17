@@ -18,7 +18,7 @@ public:
 	UsdShadeMaterial();
 
 	LIBUSDPROXY_API
-	UsdShadeMaterial(pxr::UsdShadeMaterial&& usdShadeMaterial);
+	UsdShadeMaterial(const pxr::UsdShadeMaterial& usdShadeMaterial);
 
 	LIBUSDPROXY_API
 	static

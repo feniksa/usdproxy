@@ -20,9 +20,6 @@ public:
 	UsdPrim(const UsdPrim&) = default;
 
 	LIBUSDPROXY_API
-	UsdPrim& operator=(const UsdPrim&) = default;
-
-	LIBUSDPROXY_API
 	UsdPrim(pxr::UsdPrim&& usdPrim) noexcept;
 
 	LIBUSDPROXY_API

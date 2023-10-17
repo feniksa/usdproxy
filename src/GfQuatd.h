@@ -18,7 +18,7 @@ public:
 	GfQuatd(const GfQuatd&) = default;
 
 	LIBUSDPROXY_API
-	GfQuatd(pxr::GfQuatd&& gfQuatd);
+	GfQuatd(const pxr::GfQuatd& gfQuatd);
 
 	LIBUSDPROXY_API
 	double GetReal() const;

@@ -11,6 +11,9 @@ class UsdReferences
 {
 public:
 	LIBUSDPROXY_API
+	UsdReferences() = default;
+
+	LIBUSDPROXY_API
 	UsdReferences(UsdReferences&& usdReferences);
 
 	LIBUSDPROXY_API

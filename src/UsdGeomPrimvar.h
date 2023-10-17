@@ -17,7 +17,7 @@ public:
 	UsdGeomPrimvar() = default;
 
 	LIBUSDPROXY_API
-	UsdGeomPrimvar(pxr::UsdGeomPrimvar&& usdGeomPrimvar);
+	UsdGeomPrimvar(const pxr::UsdGeomPrimvar& usdGeomPrimvar);
 
 	LIBUSDPROXY_API
 	UsdAttribute GetAttr() const;

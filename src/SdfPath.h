@@ -18,6 +18,9 @@ public:
     LIBUSDPROXY_API
     explicit SdfPath(const pxr::SdfPath& path);
 
+	LIBUSDPROXY_API
+	SdfPath(const pxr::SdfPath&& path);
+
     LIBUSDPROXY_API
     explicit SdfPath(const std::string& path);
 

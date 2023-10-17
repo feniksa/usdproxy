@@ -43,6 +43,8 @@ set(HEADERS
 	UsdLuxDistantLight.h
 	UsdLuxDomeLight.h
 	UsdLuxNonboundableLightBase.h
+	DiagnosticHandler.h
+	PxrDiagnosticHandler.h
 	usdlib.h
 )
 
@@ -90,6 +92,8 @@ set(SOURCES
 	UsdLuxDistantLight.cpp
 	UsdLuxDomeLight.cpp
 	UsdLuxNonboundableLightBase.cpp
+	DiagnosticHandler.cpp
+	PxrDiagnosticHandler.cpp
 	usdlib.cpp
 )
 

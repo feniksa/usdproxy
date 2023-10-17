@@ -32,16 +32,16 @@ public:
 	UsdGeomMesh Define(const UsdStageWeakPtr& stage, const SdfPath& path);
 
 	LIBUSDPROXY_API
-	void CreateFaceVertexIndicesAttr(const VtIntArray& vtIntArray, bool writeSparsely = false);
+	UsdAttribute CreateFaceVertexIndicesAttr(const VtIntArray& vtIntArray, bool writeSparsely = false);
 
 	LIBUSDPROXY_API
-	void CreateFaceVertexCountsAttr(const VtIntArray& vtIntArray, bool writeSparsely = false);
+	UsdAttribute CreateFaceVertexCountsAttr(const VtIntArray& vtIntArray, bool writeSparsely = false);
 
 	LIBUSDPROXY_API
-	void CreatePointsAttr(const VtVec3fArray& vtVec3fArray, bool writeSparsely = false);
+	UsdAttribute CreatePointsAttr(const VtVec3fArray& vtVec3fArray, bool writeSparsely = false);
 
 	LIBUSDPROXY_API
-	void CreateNormalsAttr(const VtVec3fArray& vtVec3fArray, bool writeSparsely = false);
+	UsdAttribute CreateNormalsAttr(const VtVec3fArray& vtVec3fArray, bool writeSparsely = false);
 
 	LIBUSDPROXY_API
 	bool SetNormalsInterpolation(UsdGeomTokens token);
@@ -60,6 +60,9 @@ public:
 
 	LIBUSDPROXY_API
 	UsdPrim GetPrim() const;
+
+	LIBUSDPROXY_API
+	SdfPath GetPath() const;
 
 private:
 	pxr::UsdGeomMesh m_usdGeomMesh;

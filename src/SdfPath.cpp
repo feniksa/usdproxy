@@ -3,6 +3,11 @@
 namespace usdproxy
 {
 
+SdfPath::SdfPath(const pxr::SdfPath&& path)
+: m_sdfPath(path)
+{
+}
+
 SdfPath::SdfPath(const SdfPath& sdfPath)
 : m_sdfPath(sdfPath.m_sdfPath)
 {

@@ -54,4 +54,7 @@ using namespace usdproxy;
 %include "UsdTimeCode.i"
 %include "SdfValueTypeName.i"
 %include "GfHalf.i"
+%include "DiagnosticHandler.i"
+%include "PxrDiagnosticHandler.i"
+
 

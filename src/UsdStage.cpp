@@ -73,7 +73,6 @@ bool UsdStage::RemovePrim(const SdfPath& path)
 	return m_usdStageRefPtr->RemovePrim(path.Get());
 }
 
-
 UsdStage::UsdStage(const UsdStage& usdStage)
 : m_usdStageRefPtr(usdStage.m_usdStageRefPtr)
 {

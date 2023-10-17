@@ -11,6 +11,7 @@
 
 #include <pxr/base/vt/value.h>
 #include <pxr/usd/usdGeom/primvarsAPI.h>
+#include <fstream>
 
 namespace usdproxy
 {
@@ -30,29 +31,28 @@ UsdGeomMesh UsdGeomMesh::Define(const UsdStageWeakPtr& stage, const SdfPath& pat
 	return UsdGeomMesh(std::move(usdGeomMesh));
 }
 
-void UsdGeomMesh::CreateFaceVertexIndicesAttr(const VtIntArray& vtIntArray, bool writeSparsely)
+UsdAttribute UsdGeomMesh::CreateFaceVertexIndicesAttr(const VtIntArray& vtIntArray, bool writeSparsely)
 {
 	const pxr::VtValue value(vtIntArray.Get());
-	m_usdGeomMesh.CreateFaceVertexIndicesAttr(value, writeSparsely);
+	return m_usdGeomMesh.CreateFaceVertexIndicesAttr(value, writeSparsely);
 }
 
-
-void UsdGeomMesh::CreateFaceVertexCountsAttr(const VtIntArray& vtIntArray, bool writeSparsely)
+UsdAttribute UsdGeomMesh::CreateFaceVertexCountsAttr(const VtIntArray& vtIntArray, bool writeSparsely)
 {
 	const pxr::VtValue value(vtIntArray.Get());
-	m_usdGeomMesh.CreateFaceVertexCountsAttr(value, writeSparsely);
+	return m_usdGeomMesh.CreateFaceVertexCountsAttr(value, writeSparsely);
 }
 
-void UsdGeomMesh::CreatePointsAttr(const VtVec3fArray& vtVec3fArray, bool writeSparsely)
+UsdAttribute UsdGeomMesh::CreatePointsAttr(const VtVec3fArray& vtVec3fArray, bool writeSparsely)
 {
 	const pxr::VtValue value(vtVec3fArray.Get());
-	m_usdGeomMesh.CreatePointsAttr(value, writeSparsely);
+	return m_usdGeomMesh.CreatePointsAttr(value, writeSparsely);
 }
 
-void UsdGeomMesh::CreateNormalsAttr(const VtVec3fArray& vtVec3fArray, bool writeSparsely)
+UsdAttribute UsdGeomMesh::CreateNormalsAttr(const VtVec3fArray& vtVec3fArray, bool writeSparsely)
 {
 	const pxr::VtValue value(vtVec3fArray.Get());
-	m_usdGeomMesh.CreateNormalsAttr(value, writeSparsely);
+	return m_usdGeomMesh.CreateNormalsAttr(value, writeSparsely);
 }
 
 bool UsdGeomMesh::SetNormalsInterpolation(UsdGeomTokens token)
@@ -83,8 +83,12 @@ UsdAttribute UsdGeomMesh::CreateAttribute(const TfToken& token, const SdfValueTy
 
 UsdPrim UsdGeomMesh::GetPrim() const
 {
-	pxr::UsdPrim usdPrim = m_usdGeomMesh.GetPrim();
-	return UsdPrim(std::move(usdPrim));
+	return m_usdGeomMesh.GetPrim();
+}
+
+SdfPath UsdGeomMesh::GetPath() const
+{
+	return m_usdGeomMesh.GetPath();
 }
 
 }

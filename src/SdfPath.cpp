@@ -32,7 +32,7 @@ std::string SdfPath::GetAsString() const
 	return m_sdfPath.GetAsString();
 }
 
-bool IsValidIdentifier(const std::string& name)
+bool SdfPath::IsValidIdentifier(const std::string& name)
 {
 	return pxr::SdfPath::IsValidIdentifier(name);
 }

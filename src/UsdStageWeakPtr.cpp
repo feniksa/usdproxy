@@ -42,4 +42,23 @@ UsdPrim UsdStageWeakPtr::GetPrimAtPath(const usdproxy::SdfPath &path)
 	return UsdPrim(m_usdStageWeakPtr->GetPrimAtPath(path.Get()));
 }
 
+UsdPrim UsdStageWeakPtr::DefinePrim(const SdfPath& path)
+{
+	return m_usdStageWeakPtr->DefinePrim(path.Get());
+}
+
+void UsdStageWeakPtr::SetDefaultPrim(const UsdPrim& usdPrim)
+{
+	m_usdStageWeakPtr->SetDefaultPrim(usdPrim.Get());
+}
+
+std::string UsdStageWeakPtr::ExportAsString() const
+{
+	std::string result;
+
+	m_usdStageWeakPtr->ExportToString(&result);
+
+	return result;
+}
+
 }

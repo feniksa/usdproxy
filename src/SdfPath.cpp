@@ -24,7 +24,7 @@ const pxr::SdfPath& SdfPath::Get() const
 
 SdfPath SdfPath::AppendElementString(const std::string& element)
 {
-	return SdfPath(m_sdfPath.AppendElementString(element));
+	return m_sdfPath.AppendElementString(element);
 }
 
 std::string SdfPath::GetAsString() const
@@ -32,6 +32,9 @@ std::string SdfPath::GetAsString() const
 	return m_sdfPath.GetAsString();
 }
 
+bool IsValidIdentifier(const std::string& name)
+{
+	return pxr::SdfPath::IsValidIdentifier(name);
 }
 
-
+}

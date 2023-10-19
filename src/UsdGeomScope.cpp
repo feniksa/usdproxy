@@ -17,8 +17,7 @@ UsdGeomScope::UsdGeomScope(const usdproxy::UsdPrim &prim)
 
 UsdGeomScope UsdGeomScope::Define(const UsdStageWeakPtr &stage, const SdfPath &path)
 {
-	pxr::UsdGeomScope usdGeomScope = pxr::UsdGeomScope::Define(stage.Get(), path.Get());
-	return UsdGeomScope(std::move(usdGeomScope));
+	return UsdGeomScope(pxr::UsdGeomScope::Define(stage.Get(), path.Get()));
 }
 
 }

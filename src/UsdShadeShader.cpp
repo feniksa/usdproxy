@@ -10,7 +10,7 @@ namespace usdproxy
 {
 
 UsdShadeShader::UsdShadeShader(const pxr::UsdShadeShader& usdShadeShader)
-: m_usdShadeShader(std::move(usdShadeShader))
+: m_usdShadeShader(usdShadeShader)
 {
 }
 

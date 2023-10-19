@@ -16,7 +16,7 @@ public:
 	GfRotation() = default;
 
 	LIBUSDPROXY_API
-	GfRotation(const GfRotation&) = default;
+	GfRotation(const GfRotation& rotation) = default;
 
 	LIBUSDPROXY_API
 	GfRotation(const pxr::GfRotation& gfRotation);

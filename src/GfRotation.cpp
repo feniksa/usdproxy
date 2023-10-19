@@ -5,8 +5,8 @@
 namespace usdproxy
 {
 
-GfRotation::GfRotation(const pxr::GfRotation &gfRotation)
-	: m_gfRotation(std::move(gfRotation))
+GfRotation::GfRotation(const pxr::GfRotation& gfRotation)
+: m_gfRotation(gfRotation)
 {
 }
 

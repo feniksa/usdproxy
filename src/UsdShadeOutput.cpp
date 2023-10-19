@@ -6,7 +6,7 @@ namespace usdproxy
 {
 
 UsdShadeOutput::UsdShadeOutput(const pxr::UsdShadeOutput& usdShadeOutput)
-: m_usdShadeOutput(std::move(usdShadeOutput))
+: m_usdShadeOutput(usdShadeOutput)
 {
 }
 

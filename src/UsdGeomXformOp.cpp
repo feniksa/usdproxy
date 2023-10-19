@@ -5,7 +5,7 @@ namespace usdproxy
 {
 
 UsdGeomXformOp::UsdGeomXformOp(const pxr::UsdGeomXformOp& usdGeomXformOp)
-: m_usdGeomXformOp(std::move(usdGeomXformOp))
+: m_usdGeomXformOp(usdGeomXformOp)
 {
 }
 

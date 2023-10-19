@@ -20,9 +20,6 @@ public:
 	UsdReferences(pxr::UsdReferences&& usdReferences);
 
 	LIBUSDPROXY_API
-	UsdReferences& Emplace(pxr::UsdReferences&& usdReferences);
-
-	LIBUSDPROXY_API
 	bool IsInvalid() const;
 
 	LIBUSDPROXY_API

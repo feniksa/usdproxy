@@ -3,7 +3,7 @@
 namespace usdproxy
 {
 UsdShadeConnectableAPI::UsdShadeConnectableAPI(const pxr::UsdShadeConnectableAPI& usdShadeConnectableAPI)
-: m_usdShadeConnectableAPI(std::move(usdShadeConnectableAPI))
+: m_usdShadeConnectableAPI(usdShadeConnectableAPI)
 {
 }
 

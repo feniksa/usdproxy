@@ -24,13 +24,6 @@ UsdReferences::UsdReferences(pxr::UsdReferences&& usdReferences)
 {
 }
 
-UsdReferences& UsdReferences::Emplace(pxr::UsdReferences&& usdReferences)
-{
-	m_usdReferences = std::make_unique<pxr::UsdReferences>(std::move(usdReferences));
-
-	return *this;
-}
-
 const pxr::UsdReferences& UsdReferences::Get() const
 {
 	return *m_usdReferences.get();

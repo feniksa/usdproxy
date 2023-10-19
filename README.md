@@ -1,5 +1,6 @@
 # usdproxy
-Dummy proxy object for C-like languages for pixar usd library
+Partial binding of [pixar usd](https://github.com/PixarAnimationStudios/OpenUSD) for C# language
+
 
 ## building
 

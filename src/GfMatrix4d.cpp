@@ -8,9 +8,9 @@ namespace usdproxy
 GfMatrix4d::GfMatrix4d(double* transformation)
 : m_gfMatrix4d(
 	transformation[0 * 4 + 0], transformation[0 * 4 + 1], transformation[0 * 4 + 2], transformation[0 * 4 + 3],
-	transformation[1 * 4 + 0], transformation[1 * 4 + 1], transformation[1 * 4 + 2], transformation[0 * 4 + 3],
-	transformation[2 * 4 + 0], transformation[2 * 4 + 1], transformation[2 * 4 + 2], transformation[0 * 4 + 3],
-	transformation[3 * 4 + 0], transformation[3 * 4 + 1], transformation[3 * 4 + 2], transformation[0 * 4 + 3])
+	transformation[1 * 4 + 0], transformation[1 * 4 + 1], transformation[1 * 4 + 2], transformation[1 * 4 + 3],
+	transformation[2 * 4 + 0], transformation[2 * 4 + 1], transformation[2 * 4 + 2], transformation[2 * 4 + 3],
+	transformation[3 * 4 + 0], transformation[3 * 4 + 1], transformation[3 * 4 + 2], transformation[3 * 4 + 3])
 {
 }
 

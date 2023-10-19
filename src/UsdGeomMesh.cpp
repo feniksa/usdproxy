@@ -87,7 +87,7 @@ UsdPrim UsdGeomMesh::GetPrim() const
 
 SdfPath UsdGeomMesh::GetPath() const
 {
-	return m_usdGeomMesh.GetPath();
+	return SdfPath(m_usdGeomMesh.GetPath());
 }
 
 }

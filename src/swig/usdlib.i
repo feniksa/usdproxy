@@ -6,8 +6,10 @@
 using namespace usdproxy;
 %}
 
+%include "exception.i"
 %include "windows.i"
 %include "std_string.i"
+
 %include "usdlib.h"
 
 %include "UsdPrim.i"

@@ -11,6 +11,7 @@ using namespace usdproxy;
 %include "usdlib.h"
 
 %include "UsdPrim.i"
+%include "UsdGeomPrimvarsAPI.i"
 %include "TfToken.i"
 
 %include "UsdStage.i"
@@ -28,6 +29,7 @@ using namespace usdproxy;
 %include "UsdGeomXform.i"
 %include "UsdGeomMesh.i"
 %include "UsdGeomCamera.i"
+%include "GfVec2i.i"
 %include "GfVec2d.i"
 %include "GfVec2f.i"
 %include "GfMatrix4d.i"
@@ -39,6 +41,7 @@ using namespace usdproxy;
 %include "GfQuatd.i"
 %include "GfQuath.i"
 %include "GfCamera.i"
+%include "VtVec2iArray.i"
 %include "VtVec3fArray.i"
 %include "VtQuathArray.i"
 %include "UsdAttribute.i"

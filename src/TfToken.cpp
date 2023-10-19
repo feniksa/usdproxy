@@ -8,6 +8,11 @@ TfToken::TfToken(const std::string &value)
 {
 }
 
+TfToken::TfToken(const TfToken& token)
+: m_tfToken(token.m_tfToken)
+{
+}
+
 const pxr::TfToken &TfToken::Get() const
 {
 	return m_tfToken;

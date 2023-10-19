@@ -9,6 +9,12 @@ class TfToken
 {
 public:
 	LIBUSDPROXY_API
+	TfToken() = default;
+
+	LIBUSDPROXY_API
+	TfToken(const TfToken& token);
+
+	LIBUSDPROXY_API
 	explicit TfToken(const std::string& value);
 
 	LIBUSDPROXY_API

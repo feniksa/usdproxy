@@ -18,6 +18,8 @@ const pxr::TfToken UsdGeomTokens::toPxrToken() const
 	switch (m_token) {
 	case faceVarying:
 		return pxr::UsdGeomTokens->faceVarying;
+	case varying:
+		return pxr::UsdGeomTokens->varying;
 	}
 	return pxr::UsdGeomTokens->faceVarying;
 }

@@ -12,7 +12,8 @@ class UsdGeomTokens
 public:
 	enum Token
 	{
-		faceVarying
+		faceVarying,
+		varying
 	};
 
 	LIBUSDPROXY_API

@@ -14,8 +14,10 @@ set(HEADERS
 	SdfAssetPath.h
 	VtIntArray.h
 	VtVec2fArray.h
+	VtVec2iArray.h
 	GfVec3f.h
 	GfVec3d.h
+	GfVec2i.h
 	GfVec2d.h
 	GfVec2f.h
 	GfQuath.h
@@ -28,6 +30,7 @@ set(HEADERS
 	VtQuathArray.h
 	TfToken.h
 	UsdPrim.h
+	UsdGeomPrimvarsAPI.h
 	UsdGeomPointInstancer.h
 	UsdGeomTokens.h
 	UsdGeomPrimvar.h
@@ -63,9 +66,11 @@ set(SOURCES
 	SdfAssetPath.cpp
 	VtIntArray.cpp
 	VtVec2fArray.cpp
+	VtVec2iArray.cpp
 	VtQuathArray.cpp
 	GfVec3f.cpp
 	GfVec3d.cpp
+	GfVec2i.cpp
 	GfVec2d.cpp
 	GfVec2f.cpp
 	GfQuath.cpp
@@ -77,6 +82,7 @@ set(SOURCES
 	VtVec3fArray.cpp
 	TfToken.cpp
 	UsdPrim.cpp
+	UsdGeomPrimvarsAPI.cpp
 	UsdGeomPointInstancer.cpp
 	UsdGeomTokens.cpp
 	UsdGeomPrimvar.cpp

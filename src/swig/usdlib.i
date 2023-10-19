@@ -23,6 +23,7 @@ using namespace usdproxy;
 %include "SdfLayerHandle.i"
 %include "SdfPath.i"
 %include "SdfAssetPath.i"
+%include "UsdModelAPI.i"
 %include "UsdGeomXformOp.i"
 %include "UsdGeomTokens.i"
 %include "UsdGeomScope.i"
@@ -59,5 +60,6 @@ using namespace usdproxy;
 %include "GfHalf.i"
 %include "DiagnosticHandler.i"
 %include "PxrDiagnosticHandler.i"
+%include "KindToken.i"
 
 

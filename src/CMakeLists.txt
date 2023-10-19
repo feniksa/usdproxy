@@ -46,8 +46,10 @@ set(HEADERS
 	UsdLuxDistantLight.h
 	UsdLuxDomeLight.h
 	UsdLuxNonboundableLightBase.h
+	UsdModelAPI.h
 	DiagnosticHandler.h
 	PxrDiagnosticHandler.h
+	KindToken.h
 	usdlib.h
 )
 
@@ -90,6 +92,7 @@ set(SOURCES
 	UsdTimeCode.cpp
 	UsdGeomCamera.cpp
 	SdfValueTypeName.cpp
+	UsdModelAPI.cpp
 	UsdShadeInput.cpp
 	UsdShadeShader.cpp
 	UsdShadeMaterial.cpp
@@ -100,6 +103,7 @@ set(SOURCES
 	UsdLuxNonboundableLightBase.cpp
 	DiagnosticHandler.cpp
 	PxrDiagnosticHandler.cpp
+	KindToken.cpp
 	usdlib.cpp
 )
 

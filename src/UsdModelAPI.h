@@ -9,12 +9,23 @@ namespace usdproxy
 {
 
 class TfToken;
+class UsdSchemaBase;
+class UsdGeomXform;
 
 class UsdModelAPI
 {
 public:
 	LIBUSDPROXY_API
 	UsdModelAPI(const UsdPrim& usdPrim = UsdPrim());
+
+	LIBUSDPROXY_API
+	UsdModelAPI(const pxr::UsdSchemaBase& usdSchemaBase);
+
+	LIBUSDPROXY_API
+	UsdModelAPI(const UsdGeomXform& usdGeomXform);
+
+	LIBUSDPROXY_API
+	UsdModelAPI(const UsdSchemaBase& usdSchemaBase);
 
 	LIBUSDPROXY_API
 	bool SetKind(const TfToken& token);

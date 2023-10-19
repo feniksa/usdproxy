@@ -38,6 +38,7 @@ set(HEADERS
 	UsdAttribute.h
 	UsdTimeCode.h
 	SdfValueTypeName.h
+	UsdSchemaBase.h
 	UsdShadeInput.h
 	UsdShadeShader.h
 	UsdShadeMaterial.h
@@ -84,6 +85,7 @@ set(SOURCES
 	VtVec3fArray.cpp
 	TfToken.cpp
 	UsdPrim.cpp
+	UsdSchemaBase.cpp
 	UsdGeomPrimvarsAPI.cpp
 	UsdGeomPointInstancer.cpp
 	UsdGeomTokens.cpp

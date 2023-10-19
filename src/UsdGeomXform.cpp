@@ -1,6 +1,7 @@
 #include "UsdGeomXform.h"
 #include "UsdStageWeakPtr.h"
 #include "SdfPath.h"
+#include "UsdSchemaBase.h"
 
 namespace usdproxy
 {
@@ -22,6 +23,15 @@ SdfPath UsdGeomXform::GetPath() const
 UsdGeomXformOp UsdGeomXform::AddTransformOp() const
 {
 	return {m_usdGeomXform.AddTransformOp() };
+}
+UsdSchemaBase UsdGeomXform::GetUsdSchemaBase() const
+{
+	return UsdSchemaBase(m_usdGeomXform);
+}
+
+const pxr::UsdGeomXform& UsdGeomXform::Get() const
+{
+	return m_usdGeomXform;
 }
 
 }

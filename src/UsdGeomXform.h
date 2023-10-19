@@ -11,6 +11,7 @@ namespace usdproxy
 
 class UsdStageWeakPtr;
 class SdfPath;
+class UsdSchemaBase;
 
 class UsdGeomXform
 {
@@ -32,7 +33,13 @@ public:
 	UsdGeomXformOp AddTransformOp() const;
 
 	LIBUSDPROXY_API
+	UsdSchemaBase GetUsdSchemaBase() const;
+
+	LIBUSDPROXY_API
 	SdfPath GetPath() const;
+
+	LIBUSDPROXY_API
+	const pxr::UsdGeomXform& Get() const;
 private:
 	pxr::UsdGeomXform m_usdGeomXform;
 };

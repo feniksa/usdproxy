@@ -56,6 +56,7 @@ using namespace usdproxy;
 %include "UsdLuxDomeLight.i"
 %include "UsdRelationship.i"
 %include "UsdTimeCode.i"
+%include "UsdSchemaBase.i"
 %include "SdfValueTypeName.i"
 %include "GfHalf.i"
 %include "DiagnosticHandler.i"

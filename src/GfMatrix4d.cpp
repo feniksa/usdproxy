@@ -57,7 +57,7 @@ const pxr::GfMatrix4d& GfMatrix4d::Get() const
 
 GfVec3d GfMatrix4d::ExtractTranslation() const
 {
-	return { m_gfMatrix4d.ExtractTranslation() };
+	return GfVec3d(m_gfMatrix4d.ExtractTranslation());
 }
 
 GfRotation GfMatrix4d::ExtractRotation() const

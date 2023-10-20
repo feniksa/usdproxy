@@ -14,10 +14,10 @@ public:
 	explicit GfVec3d() = default;
 
 	LIBUSDPROXY_API
-	explicit GfVec3d(const GfVec3d&) = default;
+	explicit GfVec3d(const GfVec3d& gfVec3d);
 
 	LIBUSDPROXY_API
-	GfVec3d(const pxr::GfVec3d& gfVec3D);
+	explicit GfVec3d(const pxr::GfVec3d& gfVec3D);
 
 	LIBUSDPROXY_API
 	explicit GfVec3d(double x, double y, double z);

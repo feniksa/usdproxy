@@ -11,6 +11,7 @@ class SdfPath;
 class UsdRelationship;
 class VtIntArray;
 class VtVec3fArray;
+class VtVec3dArray;
 class VtQuathArray;
 class UsdAttribute;
 
@@ -38,6 +39,9 @@ public:
 
 	LIBUSDPROXY_API
 	UsdAttribute CreatePositionsAttr(const VtVec3fArray& value);
+
+	LIBUSDPROXY_API
+	UsdAttribute CreatePositionsAttr(const VtVec3dArray& value);
 
 	LIBUSDPROXY_API
 	UsdAttribute CreateOrientationsAttr(const VtQuathArray&);

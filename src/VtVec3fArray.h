@@ -1,12 +1,12 @@
 #pragma once
 
 #include "usdlib.h"
-#include "GfVec3f.h"
-
 #include <pxr/base/vt/array.h>
 
 namespace usdproxy
 {
+
+class GfVec3f;
 
 class VtVec3fArray
 {

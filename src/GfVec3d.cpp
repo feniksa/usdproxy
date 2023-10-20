@@ -8,6 +8,11 @@ GfVec3d::GfVec3d(double x, double y, double z)
 {
 }
 
+GfVec3d::GfVec3d(const GfVec3d& gfVec3d)
+: m_gfVec3d(gfVec3d.Get())
+{
+}
+
 GfVec3d::GfVec3d(const pxr::GfVec3d& gfVec3D)
 : m_gfVec3d(gfVec3D)
 {
@@ -25,7 +30,7 @@ double GfVec3d::Value(int index) const
 
 GfVec3d GfVec3d::ZAxis()
 {
-	return { pxr::GfVec3d::ZAxis() };
+	return GfVec3d(pxr::GfVec3d::ZAxis());
 }
 
 }

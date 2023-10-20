@@ -6,6 +6,7 @@
 #include "VtVec3fArray.h"
 #include "VtQuathArray.h"
 #include "UsdAttribute.h"
+#include "VtVec3dArray.h"
 
 namespace usdproxy
 {
@@ -36,6 +37,12 @@ UsdAttribute UsdGeomPointInstancer::CreateProtoIndicesAttr(const VtIntArray& val
 }
 
 UsdAttribute UsdGeomPointInstancer::CreatePositionsAttr(const VtVec3fArray& value)
+{
+	const pxr::VtValue val(value.Get());
+	return { m_usdGeomPointInstancer.CreatePositionsAttr(val) };
+}
+
+UsdAttribute UsdGeomPointInstancer::CreatePositionsAttr(const VtVec3dArray& value)
 {
 	const pxr::VtValue val(value.Get());
 	return { m_usdGeomPointInstancer.CreatePositionsAttr(val) };

@@ -46,6 +46,7 @@ using namespace usdproxy;
 %include "GfCamera.i"
 %include "VtVec2iArray.i"
 %include "VtVec3fArray.i"
+%include "VtVec3dArray.i"
 %include "VtQuathArray.i"
 %include "VtQuatdArray.i"
 %include "UsdAttribute.i"

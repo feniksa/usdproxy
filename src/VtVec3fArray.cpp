@@ -1,4 +1,5 @@
 #include "VtVec3fArray.h"
+#include "GfVec3f.h"
 
 namespace usdproxy
 {

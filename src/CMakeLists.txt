@@ -27,6 +27,7 @@ set(HEADERS
 	GfHalf.h
 	GfCamera.h
 	VtVec3fArray.h
+	VtVec3dArray.h
 	VtQuathArray.h
 	VtQuatdArray.h
 	TfToken.h
@@ -85,6 +86,7 @@ set(SOURCES
 	GfQuatd.cpp
 	GfCamera.cpp
 	VtVec3fArray.cpp
+	VtVec3dArray.cpp
 	TfToken.cpp
 	UsdPrim.cpp
 	UsdSchemaBase.cpp

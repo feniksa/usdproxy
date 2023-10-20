@@ -7,6 +7,7 @@ namespace usdproxy
 {
 
 class GfVec3d;
+class GfQuath;
 
 class GfQuatd
 {
@@ -15,10 +16,13 @@ public:
 	GfQuatd() = default;
 
 	LIBUSDPROXY_API
-	GfQuatd(const GfQuatd&) = default;
+	explicit GfQuatd(const GfQuatd& gfQuatd) = default;
 
 	LIBUSDPROXY_API
-	GfQuatd(const pxr::GfQuatd& gfQuatd);
+	explicit GfQuatd(const pxr::GfQuatd& gfQuatd);
+
+	LIBUSDPROXY_API
+	explicit GfQuatd(const GfQuath& gfQuath);
 
 	LIBUSDPROXY_API
 	double GetReal() const;

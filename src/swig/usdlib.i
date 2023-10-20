@@ -47,6 +47,7 @@ using namespace usdproxy;
 %include "VtVec2iArray.i"
 %include "VtVec3fArray.i"
 %include "VtQuathArray.i"
+%include "VtQuatdArray.i"
 %include "UsdAttribute.i"
 %include "UsdGeomPointInstancer.i"
 %include "UsdShadeShader.i"

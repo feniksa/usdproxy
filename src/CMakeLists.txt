@@ -28,6 +28,7 @@ set(HEADERS
 	GfCamera.h
 	VtVec3fArray.h
 	VtQuathArray.h
+	VtQuatdArray.h
 	TfToken.h
 	UsdPrim.h
 	UsdGeomPrimvarsAPI.h
@@ -71,6 +72,7 @@ set(SOURCES
 	VtVec2fArray.cpp
 	VtVec2iArray.cpp
 	VtQuathArray.cpp
+	VtQuatdArray.cpp
 	GfVec3f.cpp
 	GfVec3d.cpp
 	GfVec2i.cpp

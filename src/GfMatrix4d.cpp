@@ -47,7 +47,7 @@ void GfMatrix4d::CopyFromArray(const double array[4][4])
 LIBUSDPROXY_API
 GfMatrix4d GfMatrix4d::GetTranspose() const
 {
-	return { m_gfMatrix4d.GetTranspose() };
+	return GfMatrix4d(m_gfMatrix4d.GetTranspose());
 }
 
 const pxr::GfMatrix4d& GfMatrix4d::Get() const

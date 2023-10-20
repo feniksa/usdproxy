@@ -1,10 +1,16 @@
 #include "GfQuath.h"
 #include "GfHalf.h"
+#include "GfQuatd.h"
 
 namespace usdproxy
 {
 GfQuath::GfQuath(GfHalf realVal)
 : m_gfQuath(realVal.Get())
+{
+}
+
+GfQuath::GfQuath(const GfQuatd& gfQuatd)
+: m_gfQuath(gfQuatd.Get())
 {
 }
 

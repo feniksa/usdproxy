@@ -27,7 +27,7 @@ const pxr::GfRotation &GfRotation::Get() const
 
 GfQuatd GfRotation::GetQuat() const
 {
-	return { m_gfRotation.GetQuat() };
+	return GfQuatd(m_gfRotation.GetQuat());
 }
 
 }

@@ -25,7 +25,7 @@ command = ['python', build_script,
            '--build-monolithic', '--no-tests',
            '--no-examples', '--no-tutorials', 
            '--no-docs', '--no-python-docs', 
-           '--no-tools', '--no-python', 
+           '--no-tools', '--python', 
            '--no-openimageio',         
            '--no-usdview', '--materialx', 
            args.outdir]

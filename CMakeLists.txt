@@ -11,7 +11,7 @@ option(ENABLE_TESTING "Enable testing" TRUE)
 option(EXPORT "Export sybmols" TRUE)
 
 include("${CMAKE_SOURCE_DIR}/cmake/CompileOptions.cmake")
-find_package(Boost REQUIRED COMPONENTS filesystem)
+find_package(Boost REQUIRED COMPONENTS regex atomic)
 find_package(pxr REQUIRED)
 
 set(USD_DEPS "c:/libs/usdbuild")

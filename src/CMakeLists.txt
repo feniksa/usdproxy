@@ -120,7 +120,7 @@ target_include_directories(usdproxy PUBLIC
 )
 target_link_directories(usdproxy PUBLIC "c:/libs/usd/lib")
 target_link_libraries(usdproxy PUBLIC
-		Boost::filesystem
+		Boost::atomic Boost::regex
 		"${PXR_LIBRARIES}"
 )
 if (EXPORT)

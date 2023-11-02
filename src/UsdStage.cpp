@@ -38,6 +38,11 @@ UsdStageRefPtr UsdStage::Open(const std::string &filePath, InitialLoadSet load)
 	return stagePtr;
 }
 
+UsdStage UsdStage::CreateNew(const std::string& identifier, InitialLoadSet load)
+{
+	return pxr::UsdStage::CreateNew(identifier, convert(load));
+}
+
 UsdStage UsdStage::CreateInMemory()
 {
 	return pxr::UsdStage::CreateInMemory();

@@ -54,6 +54,9 @@ set(HEADERS
 	PxrDiagnosticHandler.h
 	KindToken.h
 	usdlib.h
+	PlugPlugin.h
+	PlugPluginPtrVector.h
+	PlugRegistry.h
 )
 
 set(SOURCES
@@ -111,6 +114,9 @@ set(SOURCES
 	PxrDiagnosticHandler.cpp
 	KindToken.cpp
 	usdlib.cpp
+	PlugPlugin.cpp
+	PlugPluginPtrVector.cpp
+	PlugRegistry.cpp
 )
 
 add_library(usdproxy SHARED ${HEADERS} ${SOURCES})

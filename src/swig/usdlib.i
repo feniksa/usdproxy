@@ -66,5 +66,8 @@ using namespace usdproxy;
 %include "DiagnosticHandler.i"
 %include "PxrDiagnosticHandler.i"
 %include "KindToken.i"
+%include "PlugPlugin.i"
+%include "PlugPluginPtrVector.i"
+%include "PlugRegistry.i"
 
 

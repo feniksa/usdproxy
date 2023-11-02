@@ -38,6 +38,10 @@ public:
     static
     UsdStage CreateInMemory();
 
+	LIBUSDPROXY_API
+	static
+	UsdStage CreateNew(const std::string& identifier, InitialLoadSet load = LoadAll);
+
     LIBUSDPROXY_API
     SdfLayerHandle GetRootLayer();
 

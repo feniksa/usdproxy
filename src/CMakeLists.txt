@@ -1,4 +1,5 @@
 set(HEADERS
+	FileFormatArguments.h
 	UsdStage.h
 	UsdStageRefPtr.h
 	UsdStageWeakPtr.h
@@ -9,7 +10,9 @@ set(HEADERS
 	UsdGeomMesh.h
 	UsdRelationship.h
 	UsdReferences.h
+	SdfLayerRefPtr.h
 	SdfLayerHandle.h
+	SdfLayerHandleVector.h
 	SdfPath.h
 	SdfAssetPath.h
 	VtIntArray.h
@@ -60,6 +63,7 @@ set(HEADERS
 )
 
 set(SOURCES
+	FileFormatArguments.cpp
 	UsdStage.cpp
 	UsdStageRefPtr.cpp
 	UsdStageWeakPtr.cpp
@@ -69,7 +73,9 @@ set(SOURCES
 	UsdGeomMesh.cpp
 	UsdRelationship.cpp
 	UsdReferences.cpp
+	SdfLayerRefPtr.cpp
 	SdfLayerHandle.cpp
+	SdfLayerHandleVector.cpp
 	SdfPath.cpp
 	SdfAssetPath.cpp
 	VtIntArray.cpp

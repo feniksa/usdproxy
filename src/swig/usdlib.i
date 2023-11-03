@@ -12,19 +12,22 @@ using namespace usdproxy;
 
 %include "usdlib.h"
 
-%include "UsdPrim.i"
-%include "UsdGeomPrimvarsAPI.i"
+%include "FileFormatArguments.i"
+
 %include "TfToken.i"
 
+%include "SdfLayerRefPtr.i"
+%include "SdfLayerHandle.i"
+%include "SdfLayerHandleVector.i"
+%include "SdfPath.i"
+%include "SdfAssetPath.i"
+
+%include "UsdPrim.i"
 %include "UsdStage.i"
 %include "UsdStageRefPtr.i"
 %include "UsdStageWeakPtr.i"
 %include "UsdStagePtr.i"
 %include "UsdReferences.i"
-
-%include "SdfLayerHandle.i"
-%include "SdfPath.i"
-%include "SdfAssetPath.i"
 %include "UsdModelAPI.i"
 %include "UsdGeomXformOp.i"
 %include "UsdGeomTokens.i"
@@ -32,6 +35,7 @@ using namespace usdproxy;
 %include "UsdGeomXform.i"
 %include "UsdGeomMesh.i"
 %include "UsdGeomCamera.i"
+%include "UsdGeomPrimvarsAPI.i"
 %include "GfVec2i.i"
 %include "GfVec2d.i"
 %include "GfVec2f.i"

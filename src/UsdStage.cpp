@@ -1,11 +1,13 @@
 #include "UsdStage.h"
 
+#include <pxr/usd/usd/stage.h>
+
 #include "SdfPath.h"
 #include "UsdPrim.h"
 #include "UsdStageRefPtr.h"
 #include "SdfLayerHandle.h"
-
-#include <pxr/usd/usd/stage.h>
+#include "SdfLayerHandleVector.h"
+#include "SdfLayerRefPtr.h"
 
 namespace
 {
@@ -46,6 +48,11 @@ UsdStage UsdStage::CreateNew(const std::string& identifier, InitialLoadSet load)
 UsdStage UsdStage::CreateInMemory()
 {
 	return pxr::UsdStage::CreateInMemory();
+}
+
+UsdStage UsdStage::CreateInMemory(const std::string &identifier, usdproxy::UsdStage::InitialLoadSet load)
+{
+	return pxr::UsdStage::CreateInMemory(identifier, convert(load));
 }
 
 SdfLayerHandle UsdStage::GetRootLayer()
@@ -89,6 +96,16 @@ std::string UsdStage::ExportToString() const
 	m_usdStageRefPtr->ExportToString(&result);
 
 	return result;
+}
+
+SdfLayerHandleVector UsdStage::GetLayerStack(bool includeSessionLayers) const
+{
+	return SdfLayerHandleVector(m_usdStageRefPtr->GetLayerStack(includeSessionLayers));
+}
+
+SdfLayerRefPtr UsdStage::Flatten(bool addSourceFileComment)
+{
+	return SdfLayerRefPtr(m_usdStageRefPtr->Flatten(addSourceFileComment));
 }
 
 }

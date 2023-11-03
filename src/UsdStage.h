@@ -11,6 +11,8 @@ class UsdStageRefPtr;
 class UsdPrim;
 class SdfPath;
 class SdfLayerHandle;
+class SdfLayerHandleVector;
+class SdfLayerRefPtr;
 
 class UsdStage
 {
@@ -40,6 +42,10 @@ public:
 
 	LIBUSDPROXY_API
 	static
+	UsdStage CreateInMemory(const std::string& identifier, InitialLoadSet load = LoadAll);
+
+	LIBUSDPROXY_API
+	static
 	UsdStage CreateNew(const std::string& identifier, InitialLoadSet load = LoadAll);
 
     LIBUSDPROXY_API
@@ -59,6 +65,12 @@ public:
 
 	LIBUSDPROXY_API
 	std::string ExportToString() const;
+
+	LIBUSDPROXY_API
+	SdfLayerHandleVector GetLayerStack(bool includeSessionLayers = true) const;
+
+	LIBUSDPROXY_API
+	SdfLayerRefPtr Flatten(bool addSourceFileComment = true);
 
 	LIBUSDPROXY_API
 	const pxr::UsdStageRefPtr& Get() const;

@@ -1,4 +1,4 @@
-%module UsdLayerHandle
+%module SdfLayerHandle
 
 %{
 #include "SdfLayerHandle.h"

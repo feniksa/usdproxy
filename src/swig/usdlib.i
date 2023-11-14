@@ -30,6 +30,7 @@ using namespace usdproxy;
 %include "UsdReferences.i"
 %include "UsdModelAPI.i"
 %include "UsdGeomXformOp.i"
+%include "UsdGeomXformOpArray.i"
 %include "UsdGeomTokens.i"
 %include "UsdGeomScope.i"
 %include "UsdGeomXform.i"

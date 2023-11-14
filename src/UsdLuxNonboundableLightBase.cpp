@@ -37,7 +37,7 @@ UsdAttribute UsdLuxNonboundableLightBase::CreateExposureAttr(float exposure) con
 
 UsdGeomXformOp UsdLuxNonboundableLightBase::AddTransformOp() const
 {
-	return m_usdLuxNonboundableLightBase.AddTransformOp();
+	return UsdGeomXformOp(m_usdLuxNonboundableLightBase.AddTransformOp());
 }
 
 }

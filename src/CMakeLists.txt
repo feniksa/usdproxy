@@ -5,6 +5,7 @@ set(HEADERS
 	UsdStageWeakPtr.h
 	UsdStagePtr.h
 	UsdGeomXformOp.h
+	UsdGeomXformOpArray.h
 	UsdGeomScope.h
 	UsdGeomXform.h
 	UsdGeomMesh.h
@@ -68,6 +69,7 @@ set(SOURCES
 	UsdStageRefPtr.cpp
 	UsdStageWeakPtr.cpp
 	UsdGeomXformOp.cpp
+	UsdGeomXformOpArray.cpp
 	UsdGeomScope.cpp
 	UsdGeomXform.cpp
 	UsdGeomMesh.cpp

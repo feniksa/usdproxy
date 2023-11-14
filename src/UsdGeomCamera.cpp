@@ -27,9 +27,8 @@ const pxr::UsdGeomCamera& UsdGeomCamera::Get() const
 
 UsdGeomXformOp UsdGeomCamera::AddTransformOp()
 {
-	return { m_usdGeomCamera.AddTransformOp() };
+	return UsdGeomXformOp(m_usdGeomCamera.AddTransformOp());
 }
-
 
 UsdAttribute UsdGeomCamera::CreateProjectionAttr(const TfToken& token) const
 {
